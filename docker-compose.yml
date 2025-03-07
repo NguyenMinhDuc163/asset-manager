@@ -1,0 +1,53 @@
+networks:
+  app_network:
+    driver: bridge
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlserver_container
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=NguyenDuc@163
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "NguyenDuc@163", "-Q", "SELECT 1"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - app_network
+
+  assetmanager:
+    build: ./asset_manager_BE
+    container_name: asset_manager_app
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlserver://sqlserver_container:1433;databaseName=springboot_asset_dev;encrypt=false
+      - SPRING_DATASOURCE_USERNAME=sa
+      - SPRING_DATASOURCE_PASSWORD=NguyenDuc@163
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    networks:
+      - app_network
+
+  assetmanager_fe:
+    build: ./asset_manager_FE
+    container_name: asset_manager_FE_app
+    depends_on:
+      - assetmanager
+    environment:
+      - REACT_APP_API_URL=http://localhost:8080/api/v1
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    networks:
+      - app_network
+
+

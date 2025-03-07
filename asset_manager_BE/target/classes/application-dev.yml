@@ -1,0 +1,40 @@
+spring:
+
+  banner:
+    location: classpath:banner.txt
+  process:
+    app:
+      title: Asset Management System
+      version: 1.0.0
+  schema-name: springboot_asset_dev
+  device-name: DEVICE_assetManagement
+  env-name   : dev
+
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=springboot_asset_dev
+    username: sa
+    password: 123456
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    connectionProperties.useUnicode: true
+    connectionProperties.characterEncoding: utf-8
+    sqlScriptEncoding: UTF-8
+    initialization-mode: always
+    data: classpath:initdata/import.sql
+
+  jpa:
+    database: SQL_SERVER
+    show-sql: true
+    hibernate:
+      dialect: org.hibernate.dialect.SQLServer2014Dialect
+      ddl-auto: update # Hibernate ddl auto { create, create-drop, validate, update, none }
+    properties:
+      hibernate.check_nullability: true
+
+# ----
+logging:
+  level.org.hibernate.SQL: DEBUG
+  level.org.hibernate.type: TRACE
+
+# ===================== Jwt Spring Security ===================== #
+asset.app.jwtSecret: SHMSdb123456SHMSdb123456SHMSdb123456SHMSdb123456SHMSdb123456SHMSdb123456SHMSdb123456SHMSdb123456
+asset.app.jwtExpiration: 86400000

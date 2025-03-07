@@ -1,0 +1,18 @@
+---
+spring.profiles: dev
+spring.profiles.include: common, dev
+---
+spring.profiles: prod
+spring.profiles.include: common, prod
+---
+spring:
+  profiles:
+    active: dev
+
+  task:
+    scheduling:
+      pool:
+        size: 5
+---
+
+file.storage-dir: src/main/resources/public/qr-code/

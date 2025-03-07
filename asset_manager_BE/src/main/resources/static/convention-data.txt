@@ -1,0 +1,39 @@
+phone: (min 10 - max = 15)
+email: (min 10 - max = 50)
+credentialCode: (min = 5, max = 100)
+
+------------------------------------------------------------------------------------------------------------------------
+| ROLE BASE AUTHORIZATION
+------------------------------------------------------------------------------------------------------------------------
+--> Public all:
+        + AuthResources
+
+- ADMIN:
+        + BackupRestoreResources
+        + UserResources
+
+- ACCOUNTANT:
+        + AdditionalProductResources
+        + AdditionalResources
+        + CalculationUnitResources
+        + CampusResources
+        + CategoryResources
+        + DepartmentResources
+        + GroupResources
+        + InventoryResources
+        + InventoryMaterialResources
+        + LiquidateResources
+        + LiquidateMaterialResources
+        + MaterialResources
+        + OrganizationResources
+        + PlaceResources
+        + ProductResource
+        + StatisticalResources
+        + TransferMaterialResources
+        + TypePlaceResources
+
+- EMPLOYEE:
+        + MaterialResources
+
+- INSPECTOR:
+        + InventoryMaterialResources

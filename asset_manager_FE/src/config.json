@@ -1,0 +1,4 @@
+{
+    "baseApiUrl": "http://localhost:8080/api/v1",
+    "baseAPIUrlQr": "https://dada4ea85dbe.ngrok.io"
+}

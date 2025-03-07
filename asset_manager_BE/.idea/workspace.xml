@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9424f87f-00d8-409d-a013-70fcfa0e92ad" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ilXoYfgEEmdRNKxqTcP9md8b2l" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Asset Application.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dev\graduating-space\source-code\Asset\src\main\resources\public\image" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Asset Application">
+    <configuration name="Asset Application" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.AssetApplication" />
+      <module name="Asset" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QRCodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.spacetest.QRCodeGenerator" />
+      <module name="Asset" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ptit.asset.spacetest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.QRCodeGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9424f87f-00d8-409d-a013-70fcfa0e92ad" name="Default Changelist" comment="" />
+      <created>1602483328395</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602483328395</updated>
+    </task>
+    <task id="LOCAL-00001" summary="init commit">
+      <created>1602485942280</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602485942280</updated>
+    </task>
+    <task id="LOCAL-00002" summary="# basically build schema for project">
+      <created>1604219576843</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604219576843</updated>
+    </task>
+    <task id="LOCAL-00003" summary="# addition repository for entity&#10;# basically config security json web token for spring&#10;# add swagger for api">
+      <created>1604250401450</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604250401450</updated>
+    </task>
+    <task id="LOCAL-00004" summary="# addition map struct for project combine lombok&#10;# build some first api&#10;# modify something about database">
+      <created>1604507534710</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604507534710</updated>
+    </task>
+    <task id="LOCAL-00005" summary="# change something in database about name - relationship - enum">
+      <created>1604567576643</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604567576643</updated>
+    </task>
+    <task id="LOCAL-00006" summary="# Add some api&#10;# modify some table&#10;# add some new functional in mapper">
+      <created>1604660964049</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604660964049</updated>
+    </task>
+    <task id="LOCAL-00007" summary="# Add some api for additional - liquidate - product">
+      <created>1604894228189</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604894228189</updated>
+    </task>
+    <task id="LOCAL-00008" summary="# Add some api for place">
+      <created>1604907424658</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604907424658</updated>
+    </task>
+    <task id="LOCAL-00009" summary="# change database - delete some entity on old version and relative repository">
+      <created>1604910268991</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604910268991</updated>
+    </task>
+    <task id="LOCAL-00010" summary="# add api for additional product">
+      <created>1604916645634</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1604916645634</updated>
+    </task>
+    <task id="LOCAL-00011" summary="# add api for material">
+      <created>1605080716084</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605080716084</updated>
+    </task>
+    <task id="LOCAL-00012" summary="# add api for liquidate material">
+      <created>1605086690705</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605086690705</updated>
+    </task>
+    <task id="LOCAL-00013" summary="# add api for transfer material">
+      <created>1605090588705</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605090588705</updated>
+    </task>
+    <task id="LOCAL-00014" summary="# add api for inventory material">
+      <created>1605106982873</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1605106982873</updated>
+    </task>
+    <task id="LOCAL-00015" summary="# add api for pagination&#10;# add api crud for user">
+      <created>1605176474763</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1605176474763</updated>
+    </task>
+    <task id="LOCAL-00016" summary="# add api fetch all for almost all entity">
+      <created>1605246757326</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1605246757326</updated>
+    </task>
+    <task id="LOCAL-00017" summary="# add exception handler for rest api">
+      <created>1605626571837</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1605626571838</updated>
+    </task>
+    <task id="LOCAL-00018" summary="# add init data when start application">
+      <created>1605630452238</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1605630452238</updated>
+    </task>
+    <task id="LOCAL-00019" summary="# add dependency for next step export excel&#10;# add cross origin for api&#10;# add fetch All for some entity">
+      <created>1606066604573</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1606066604573</updated>
+    </task>
+    <task id="LOCAL-00020" summary="# change return type response on http request">
+      <created>1606224684947</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1606224684947</updated>
+    </task>
+    <task id="LOCAL-00021" summary="# change size of name product validation&#10;# add a role&#10;# add statistical basic">
+      <created>1606287269355</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1606287269355</updated>
+    </task>
+    <task id="LOCAL-00022" summary="# Change structure entity material&#10;# Change structure entity product&#10;# Create some export excel provider&#10;# Add api create addition in box for multiple add material&#10;# Add group entity for cover report wide">
+      <created>1606468130987</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1606468130987</updated>
+    </task>
+    <task id="LOCAL-00023" summary="# add in_check property for Inventory&#10;# add api change in_check&#10;# re code again for excel export&#10;# add some transactional annotation">
+      <created>1606558243438</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1606558243438</updated>
+    </task>
+    <task id="LOCAL-00024" summary="# add export excel Statistical&#10;# disable property qrCode of material">
+      <created>1606728918339</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1606728918339</updated>
+    </task>
+    <task id="LOCAL-00025" summary="# add some logic for valid transfer material&#10;# add api fetch history transfer of material&#10;# add one more property for instance auth response">
+      <created>1606832749335</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1606832749335</updated>
+    </task>
+    <task id="LOCAL-00026" summary="# change structure of inventory material entity&#10;# define scan qr code info response&#10;# add more logic for flow create inventory material">
+      <created>1606900598891</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1606900598892</updated>
+    </task>
+    <task id="LOCAL-00027" summary="# add logic before create liquidate&#10;# complete update QR code when update credential of material&#10;# change config security for public image&#10;# change size min for organization">
+      <created>1606983371076</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1606983371076</updated>
+    </task>
+    <task id="LOCAL-00028" summary="# add filter year for export data excel&#10;# change size min of campus&#10;# change script for store procedure">
+      <created>1606987586806</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1606987586806</updated>
+    </task>
+    <task id="LOCAL-00029" summary="# fix create material (generated QR code after the process save material so have id to compress to QR code)">
+      <created>1607101148028</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1607101148028</updated>
+    </task>
+    <task id="LOCAL-00030" summary="# Add scheduling for server to backup database&#10;# Change to allow column place from in transfer material can be null&#10;# Add api fetch all backup version&#10;# Add api restore database based on version&#10;# Add script backup and restore">
+      <created>1607410769055</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1607410769055</updated>
+    </task>
+    <task id="LOCAL-00031" summary="# Add scheduling for server to backup database&#10;# Change to allow column place from in transfer material can be null&#10;# Add api fetch all backup version&#10;# Add api restore database based on version&#10;# =&gt; Consume all for previous commit">
+      <created>1607410920604</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1607410920604</updated>
+    </task>
+    <task id="LOCAL-00032" summary="# add api fetch material by category">
+      <created>1607492758080</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1607492758080</updated>
+    </task>
+    <task id="LOCAL-00033" summary="# add cross origin for backup restore api&#10;# add property in process for table additional&#10;# add api change status of additional&#10;# add validation for create new additional&#10;# add api find inventory material by user id&#10;# add a little bit logic for find top inventory&#10;# add api filter for material&#10;# fix type sort from id to position&#10;# add check null for current place at scan QR code">
+      <created>1607620801394</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1607620801394</updated>
+    </task>
+    <task id="LOCAL-00034" summary="# add time for fetch transfer material history&#10;# create new version api additional product create in box">
+      <created>1607791960282</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1607791960282</updated>
+    </task>
+    <task id="LOCAL-00035" summary="# fix excel export&#10;# add function fetch price of material&#10;# change role of system&#10;# extend data response for material">
+      <created>1608058009270</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1608058009270</updated>
+    </task>
+    <task id="LOCAL-00036" summary="# fix a little bit of export excel">
+      <created>1608114979439</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1608114979439</updated>
+    </task>
+    <task id="LOCAL-00037" summary="# change database name&#10;# add api create backup manually&#10;# add info for banner">
+      <created>1608314940882</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1608314940882</updated>
+    </task>
+    <task id="LOCAL-00038" summary="# add feature reset password&#10;# fix logic scan QR code&#10;# add more column for excel&#10;# init bootstrap store procedure and device for system">
+      <created>1608488648090</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1608488648090</updated>
+    </task>
+    <task id="LOCAL-00039" summary="# add authorization api&#10;# add extended info about value of material">
+      <created>1609004530346</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1609004530346</updated>
+    </task>
+    <task id="LOCAL-00040" summary="# remove auth for space resources&#10;# fix filter at material">
+      <created>1609171061160</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1609171061161</updated>
+    </task>
+    <task id="LOCAL-00041" summary="# add extended info for api filter material&#10;# add more property for request body api filter">
+      <created>1609349012189</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1609349012190</updated>
+    </task>
+    <task id="LOCAL-00042" summary="# enable security for api endpoint&#10;# Add content message in scan QR code">
+      <created>1610041071694</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1610041071694</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="# add init data when start application" />
+    <MESSAGE value="# add dependency for next step export excel&#10;# add cross origin for api&#10;# add fetch All for some entity" />
+    <MESSAGE value="# change return type response on http request" />
+    <MESSAGE value="# change size of name product validation&#10;# add a role&#10;# add statistical basic" />
+    <MESSAGE value="# Change structure entity material&#10;# Change structure entity product&#10;# Create some export excel provider&#10;# Add api create addition in box for multiple add material&#10;# Add group entity for cover report wide" />
+    <MESSAGE value="# add in_check property for Inventory&#10;# add api change in_check&#10;# re code again for excel export&#10;# add some transactional annotation" />
+    <MESSAGE value="# add export excel Statistical&#10;# disable property qrCode of material" />
+    <MESSAGE value="# add some logic for valid transfer material&#10;# add api fetch history transfer of material&#10;# add one more property for instance auth response" />
+    <MESSAGE value="# change structure of inventory material entity&#10;# define scan qr code info response&#10;# add more logic for flow create inventory material" />
+    <MESSAGE value="# add logic before create liquidate&#10;# complete update QR code when update credential of material&#10;# change config security for public image&#10;# change size min for organization" />
+    <MESSAGE value="# add filter year for export data excel&#10;# change size min of campus&#10;# change script for store procedure" />
+    <MESSAGE value="# fix create material (generated QR code after the process save material so have id to compress to QR code)" />
+    <MESSAGE value="# Add scheduling for server to backup database&#10;# Change to allow column place from in transfer material can be null&#10;# Add api fetch all backup version&#10;# Add api restore database based on version&#10;# Add script backup and restore" />
+    <MESSAGE value="# Add scheduling for server to backup database&#10;# Change to allow column place from in transfer material can be null&#10;# Add api fetch all backup version&#10;# Add api restore database based on version&#10;# =&gt; Consume all for previous commit" />
+    <MESSAGE value="# add api fetch material by category" />
+    <MESSAGE value="# add cross origin for backup restore api&#10;# add property in process for table additional&#10;# add api change status of additional&#10;# add validation for create new additional&#10;# add api find inventory material by user id&#10;# add a little bit logic for find top inventory&#10;# add api filter for material&#10;# fix type sort from id to position&#10;# add check null for current place at scan QR code" />
+    <MESSAGE value="# add time for fetch transfer material history&#10;# create new version api additional product create in box" />
+    <MESSAGE value="# fix excel export&#10;# add function fetch price of material&#10;# change role of system&#10;# extend data response for material" />
+    <MESSAGE value="# fix a little bit of export excel" />
+    <MESSAGE value="# change database name&#10;# add api create backup manually&#10;# add info for banner" />
+    <MESSAGE value="# add feature reset password&#10;# fix logic scan QR code&#10;# add more column for excel&#10;# init bootstrap store procedure and device for system" />
+    <MESSAGE value="# add authorization api&#10;# add extended info about value of material" />
+    <MESSAGE value="# remove auth for space resources&#10;# fix filter at material" />
+    <MESSAGE value="# add extended info for api filter material&#10;# add more property for request body api filter" />
+    <MESSAGE value="# enable security for api endpoint&#10;# Add content message in scan QR code" />
+    <option name="LAST_COMMIT_MESSAGE" value="# enable security for api endpoint&#10;# Add content message in scan QR code" />
+  </component>
+</project>

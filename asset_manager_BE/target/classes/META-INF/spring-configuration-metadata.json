@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "file",
+      "type": "com.ptit.asset.configuration.PropertiesFileConfig",
+      "sourceType": "com.ptit.asset.configuration.PropertiesFileConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "file.storage-dir",
+      "type": "java.lang.String",
+      "sourceType": "com.ptit.asset.configuration.PropertiesFileConfig"
+    }
+  ],
+  "hints": []
+}

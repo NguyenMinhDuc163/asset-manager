@@ -76,6 +76,7 @@ public class DepartmentResourcesAPI {
     @GetMapping("/department:fetchAll")
     public ResponseEntity<?> fetchAll(){
         val result = departmentService.fetchAll();
+        System.out.print("------------>" + result.toString());
         return new ResponseEntity<>(
                 RestResponseUtils.create(result,"Fetch all department success", 200), HttpStatus.OK
         );

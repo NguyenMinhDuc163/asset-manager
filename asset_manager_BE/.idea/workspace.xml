@@ -20,8 +20,15 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="1ilXoYfgEEmdRNKxqTcP9md8b2l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -35,7 +42,25 @@
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.AssetApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/ky8/SQA/asset_manager/asset_manager_FE",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -43,7 +68,7 @@
       <recent name="C:\dev\graduating-space\source-code\Asset\src\main\resources\public\image" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Asset Application">
+  <component name="RunManager" selected="Spring Boot.AssetApplication">
     <configuration name="Asset Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.AssetApplication" />
       <module name="Asset" />
@@ -64,12 +89,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AssetApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Asset" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ptit.asset.AssetApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/../asset_manager_FE/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Asset Application" />
+      <item itemvalue="Application.QRCodeGenerator" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="Spring Boot.AssetApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.QRCodeGenerator" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -80,6 +134,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602483328395</updated>
+      <workItem from="1741438478588" duration="59000" />
+      <workItem from="1741438571760" duration="3705000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1602485942280</created>
@@ -377,6 +433,9 @@
     </task>
     <option name="localTasksCounter" value="43" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

@@ -87,7 +87,7 @@ export default function User(props) {
       item.createdAt = utils.convertDateTime(item.createdAt);
       item.updatedAt = utils.convertDateTime(item.updatedAt);
       const additionalProps = {
-        departmentId: item.department.id,
+        departmentId: item?.department?.id || 1,
         password: "",
         roles: item.roles.map((e) => {
           return e.roleName;
@@ -139,12 +139,14 @@ export default function User(props) {
       const { data: User } = responseData;
       console.log(User, "user alf gì");
       setRecords(UserHandledToShow(User));
+
     } catch (ex) {
       console.log("chỗ ày là gì");
       if ((ex.response && ex.response.status === 403) || (ex.response && ex.response.status === 401))
       {
         toast("Bạn không có quyền hạn truy cập trang này");
       }else {
+        console.log(`=====> ${ex}  ===== ${ex}`)
         toast.error("Errors: Lỗi tải lên dữ liệu ");
       }
     }
@@ -220,7 +222,7 @@ export default function User(props) {
      <PageHeader
         history={history}
         title="User "
-        subTitle="Tất cả các user or nhân viên  mà bạn hiện đang quản lý"
+        subTitle="Tất cả các user or nhân viên  mà bạn hiện đang quản lý "
         icon={<PersonIcon fontSize="large" />}
       />
       <Paper elevator={3} className={classes.pageContent}>
@@ -265,7 +267,7 @@ export default function User(props) {
                 <TableCell>{item.phone}</TableCell>
                 <TableCell>{item.email}</TableCell>
 
-                <TableCell>{item.department.description}</TableCell>
+                <TableCell>{item?.department?.description || ""}</TableCell>
                 <TableCell>
                   <Controls.ActionButton
                     color="primary"

@@ -9,23 +9,11 @@ import Header from "./Header";
 import OftadehRightPanel from "../../components/OftadehRightPanel/OftadehRightPanel";
 
 const handleDrawerResponsive = () => {
-  if (window.innerWidth < 900) {
-    return false;
-  }
-
-  return true;
+  return window.innerWidth >= 900;
 };
 
 const Layout = (props) => {
   const [open, setOpen] = React.useState(() => handleDrawerResponsive());
-
-  React.useEffect(() => {
-    window.addEventListener("resize", resizeChecker);
-
-    return () => {
-      window.addEventListener("resize", resizeChecker);
-    };
-  }, []);
 
   const resizeChecker = () => {
     if (handleDrawerResponsive()) {
@@ -34,6 +22,14 @@ const Layout = (props) => {
       setOpen(false);
     }
   };
+
+  React.useEffect(() => {
+    window.addEventListener("resize", resizeChecker);
+
+    return () => {
+      window.removeEventListener("resize", resizeChecker); // 🛠 Fix lỗi
+    };
+  }, []);
 
   const handleDrawerToggle = () => {
     setOpen(!open);
@@ -52,22 +48,22 @@ const Layout = (props) => {
   };
 
   return (
-    <NavigationContext.Provider
-      value={{
-        open,
-        handleDrawerToggle,
-        value,
-        handleChange,
-        handleRightPanelOpen,
-        openRightPanel,
-        setOpenRightPanel,
-      }}
-    >
-      <Header />
-      <OftadehDrawer drawerWidth={240} />
-      <OftadehRightPanel />
-      <Main drawerWidth={240} />
-    </NavigationContext.Provider>
+      <NavigationContext.Provider
+          value={{
+            open,
+            handleDrawerToggle,
+            value,
+            handleChange,
+            handleRightPanelOpen,
+            openRightPanel,
+            setOpenRightPanel,
+          }}
+      >
+        <Header />
+        <OftadehDrawer drawerWidth={240} />
+        <OftadehRightPanel />
+        <Main drawerWidth={240} />
+      </NavigationContext.Provider>
   );
 };
 

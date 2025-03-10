@@ -27,7 +27,7 @@ public class JDBCTemplateConfig {
         public DataSource sqlDataSource()
         {
             DataSourceBuilder dataSourceBuilder = DataSourceBuilder.create();
-            dataSourceBuilder.url("jdbc:sqlserver://localhost;databaseName="+schemaName);
+            dataSourceBuilder.url("jdbc:sqlserver://localhost;databaseName="+"asset_db");
             dataSourceBuilder.username("sa");
             dataSourceBuilder.password("NguyenDuc@163");
             return dataSourceBuilder.build();

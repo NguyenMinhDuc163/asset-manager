@@ -6,14 +6,12 @@ spring:
     app:
       title: Asset Management System
       version: 1.0.0
-#  schema-name: springboot_asset_dev
-  schema-name: master
+  schema-name: asset_db
   device-name: DEVICE_assetManagement
   env-name   : dev
 
   datasource:
-    url: jdbc:sqlserver://localhost;databaseName=master
-#    url: jdbc:sqlserver://localhost;databaseName=springboot_asset_dev
+    url: jdbc:sqlserver://localhost;databaseName=asset_db
     username: sa
     password: 123456
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver

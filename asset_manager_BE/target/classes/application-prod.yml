@@ -6,7 +6,7 @@ spring:
     app:
       title: Asset Management System
       version: 1.0.0
-  schema-name: springboot_asset_dev
+  schema-name: asset_db
   device-name: DEVICE_assetManagement
   env-name   : prod
 

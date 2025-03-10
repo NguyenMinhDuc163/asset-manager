@@ -1,4 +1,4 @@
-USE [springboot_asset_dev]
+USE [asset_db]
 
 CREATE PROC STATISTICAL_INVENTORY (@categoryId BIGINT, @year INT)
 AS

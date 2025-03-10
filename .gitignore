@@ -1,0 +1,67 @@
+# Ignore thư mục Maven và Gradle build
+asset_manager_BE/target/
+asset_manager_BE/out/
+asset_manager_BE/.gradle/
+asset_manager_BE/.mvn/
+asset_manager_BE/.idea/
+asset_manager_BE/.vscode/
+# Ignore file cấu hình dự án IntelliJ
+asset_manager_BE/*.iml
+
+# Ignore dependency cache
+asset_manager_BE/.classpath
+asset_manager_BE/.project
+asset_manager_BE/.settings/
+
+# Ignore file môi trường
+asset_manager_BE/.env
+asset_manager_BE/*.log
+asset_manager_BE/*.tmp
+
+# Ignore file compiled class
+asset_manager_BE/bin/
+asset_manager_BE/build/
+asset_manager_BE/**/*.class
+
+# Ignore database file (nếu sử dụng H2 hoặc SQLite)
+asset_manager_BE/h2.db
+asset_manager_BE/*.sqlite
+asset_manager_BE/*.sqlite3
+
+# Ignore tệp cấu hình cá nhân
+asset_manager_BE/.DS_Store
+asset_manager_BE/.idea/
+asset_manager_BE/.vscode/
+asset_manager_BE/*.iml
+
+
+# Ignore thư mục build và node_modules
+asset_manager_FE/node_modules/
+asset_manager_FE/build/
+asset_manager_FE/dist/
+asset_manager_FE/.parcel-cache/
+
+# Ignore file lock và môi trường
+asset_manager_FE/yarn.lock
+asset_manager_FE/package-lock.json
+asset_manager_FE/.env
+asset_manager_FE/.env.local
+asset_manager_FE/.env.development.local
+asset_manager_FE/.env.test.local
+asset_manager_FE/.env.production.local
+
+# Ignore file hệ thống và editor
+asset_manager_FE/.DS_Store
+asset_manager_FE/.idea/
+asset_manager_FE/.vscode/
+asset_manager_FE/.eslintcache
+
+# Ignore log và debug files
+asset_manager_FE/npm-debug.log*
+asset_manager_FE/yarn-debug.log*
+asset_manager_FE/yarn-error.log*
+asset_manager_FE/debug.log*
+asset_manager_FE/.npmrc
+
+# Ignore test coverage
+asset_manager_FE/coverage/

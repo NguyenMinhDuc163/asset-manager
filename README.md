@@ -6,11 +6,17 @@ docker-compose down
 # Khởi động lại container và build lại hình ảnh nếu có thay đổi
 docker-compose up --build
 
-# Copy file ddl.sql vào container có tên sqlserver_container
-docker cp db/ddl.sql sqlserver_container:/ddl.sql
+# sau khi lên chạy lệnh sau trong datagrip
+```bash
+CREATE DATABASE [asset_db]
+USE [asset_db]
+ALTER DATABASE asset_db SET MULTI_USER
+EXEC Sp_addumpdevice 'disk', 'DEVICE_assetManagement', '/var/opt/mssql/backup/assetManagement.bak'
+BACKUP DATABASE asset_db TO DISK = '/var/opt/mssql/backup/assetManagement.bak'
+```
 
-# Mở SQL Server command line, kết nối đến localhost với user SA và mật khẩu "password"
-sqlcmd -S localhost -U SA -P "password" -d master
+# chạy container asset_manager_app để tạo bảng qua ORM
 
-# Chạy file SQL ddl.sql trên database master
-sqlcmd -S localhost -U SA -P "password" -d master -i ./db/ddl.sql
+# sau khi lên thì chạy file ./db/ddl/sql trong datagrip
+
+# chạy FE

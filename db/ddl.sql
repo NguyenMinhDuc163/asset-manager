@@ -1,17 +1,12 @@
-IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'asset_db')
-    BEGIN
-        CREATE DATABASE [asset_db]
-    END
-
 USE [asset_db]
+
+
 ALTER DATABASE asset_db SET MULTI_USER
 
 IF NOT EXISTS (SELECT name FROM sys.backup_devices WHERE name = 'DEVICE_assetManagement')
-    BEGIN
-        EXEC Sp_addumpdevice 'disk', 'DEVICE_assetManagement', '/var/opt/mssql/backup/assetManagement.bak'
-    END
-
-BACKUP DATABASE asset_db TO DISK = '/var/opt/mssql/backup/assetManagement.bak'
+BEGIN
+EXEC Sp_addumpdevice 'disk', 'DEVICE_assetManagement', '/var/opt/mssql/backup/assetManagement.bak'
+END
 
 SET IDENTITY_INSERT [dbo].[organization] ON
 

@@ -35,35 +35,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Asset Application.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;76378355&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;application.passwordSafe&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Asset Application.executor": "Run",
+    "Docker.Dockerfile build.executor": "Run",
+    "JUnit.AdditionalManagementImplTest.executor": "Coverage",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "minh",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "application.passwordSafe",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev\graduating-space\source-code\Asset\src\main\resources\public\image" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Asset Application">
+  <component name="RunManager" selected="JUnit.AdditionalManagementImplTest">
     <configuration name="Asset Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.AssetApplication" />
       <module name="Asset" />
@@ -84,12 +89,56 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AdditionalManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Asset" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.AdditionalManagementImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssetApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Asset" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ptit.asset.AssetApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="maven3.6.3-openjdk-8_build" />
+          <option name="buildCliOptions" value="--target build" />
+          <option name="buildOnly" value="true" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.Asset Application" />
       <item itemvalue="Application.QRCodeGenerator" />
+      <item itemvalue="Docker.Dockerfile build" />
+      <item itemvalue="JUnit.AdditionalManagementImplTest" />
+      <item itemvalue="Spring Boot.AssetApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AdditionalManagementImplTest" />
+        <item itemvalue="Docker.Dockerfile build" />
         <item itemvalue="Application.QRCodeGenerator" />
       </list>
     </recent_temporary>
@@ -97,8 +146,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
       </set>
     </attachedChunks>
   </component>
@@ -117,6 +166,8 @@
       <workItem from="1741600170106" duration="1506000" />
       <workItem from="1741601689704" duration="247000" />
       <workItem from="1741624454480" duration="2589000" />
+      <workItem from="1743866998339" duration="54000" />
+      <workItem from="1744009075426" duration="15402000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1602485942280</created>
@@ -456,5 +507,10 @@
     <MESSAGE value="# add extended info for api filter material&#10;# add more property for request body api filter" />
     <MESSAGE value="# enable security for api endpoint&#10;# Add content message in scan QR code" />
     <option name="LAST_COMMIT_MESSAGE" value="# enable security for api endpoint&#10;# Add content message in scan QR code" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest.ic" NAME="AdditionalManagementImplTest Coverage Results" MODIFIED="1744041009164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.*</FILTER>
+    </SUITE>
   </component>
 </project>

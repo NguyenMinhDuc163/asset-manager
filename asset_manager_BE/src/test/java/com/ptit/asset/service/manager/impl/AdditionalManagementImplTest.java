@@ -1,4 +1,4 @@
-package com.ptit.asset.service;
+package com.ptit.asset.service.manager.impl;
 
 import com.ptit.asset.domain.Additional;
 import com.ptit.asset.domain.Organization;
@@ -9,7 +9,6 @@ import com.ptit.asset.dto.request.AdditionalUpdateRequestDTO;
 import com.ptit.asset.repository.AdditionalRepository;
 import com.ptit.asset.repository.OrganizationRepository;
 import com.ptit.asset.repository.UserRepository;
-import com.ptit.asset.service.manager.impl.AdditionalManagementImpl;
 import com.ptit.asset.service.manager.mapper.CentralMapper;
 import io.vavr.control.Try;
 import org.junit.jupiter.api.BeforeEach;
@@ -69,16 +68,21 @@ class AdditionalManagementImplTest {
 
     // getOne
     @Test
-    void testGetOne_success() {
+    void getOne_success() { // mã test case 1: phương thức getOne thành công với id 1
+        // Giả lập: Khi gọi findById(1L) trên additionalRepository, trả về một Optional chứa testAdditional
         when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        // Gọi phương thức getOne với id = 1L và lưu kết quả (một Try<Additional>) vào biến result
         Try<Additional> result = additionalManagement.getOne(1L);
+        // Kiểm tra: Xác nhận rằng result là thành công (không có lỗi xảy ra)
         assertThat(result.isSuccess()).isTrue();
+        // Kiểm tra: Lấy đối tượng Additional từ result và xác nhận id của nó là 1L như kỳ vọng
         assertThat(result.get().getId()).isEqualTo(1L);
+        // Xác minh: Đảm bảo rằng findById(1L) đã được gọi đúng 1 lần trên additionalRepository
         verify(additionalRepository, times(1)).findById(1L);
     }
 
     @Test
-    void testGetOne_failure_notFound() {
+    void getOne_fail_notFound() { // mã test case 1: phương thức getOne thất bại với id 1
         when(additionalRepository.findById(1L)).thenReturn(Optional.empty());
         Try<Additional> result = additionalManagement.getOne(1L);
         assertThat(result.isFailure()).isTrue();
@@ -88,7 +92,7 @@ class AdditionalManagementImplTest {
 
     // create
     @Test
-    void testCreate_success() {
+    void create_success() { // mã test case 2: phương thức create thành công
         AdditionalCreateRequestDTO dto = new AdditionalCreateRequestDTO();
         AdditionalCreateRequestDTO.Embedded embedded = new AdditionalCreateRequestDTO.Embedded();
         embedded.setUserId(1L);
@@ -113,7 +117,7 @@ class AdditionalManagementImplTest {
     }
 
     @Test
-    void testCreate_failure_userNotFound() {
+    void create_fail_userNotFound() { // mã test case 2: phương thức create thất bại vì không tồn tại user thực hiện
         AdditionalCreateRequestDTO dto = new AdditionalCreateRequestDTO();
         AdditionalCreateRequestDTO.Embedded embedded = new AdditionalCreateRequestDTO.Embedded();
         embedded.setUserId(1L);
@@ -131,7 +135,7 @@ class AdditionalManagementImplTest {
     }
 
     @Test
-    void testCreate_failure_orgNotFound() {
+    void create_fail_orgNotFound() { // mã test case 2: phương thức create thất bại vì không tồn tại tổ chức
         AdditionalCreateRequestDTO dto = new AdditionalCreateRequestDTO();
         AdditionalCreateRequestDTO.Embedded embedded = new AdditionalCreateRequestDTO.Embedded();
         embedded.setUserId(1L);
@@ -151,7 +155,7 @@ class AdditionalManagementImplTest {
     }
 
     @Test
-    void testCreate_failure_existingInProcess() {
+    void create_fail_existingInProcess() {// mã test case 2: phương thức create thất bại vì tồn tại một đợt bổ sung khác đang diễn ra
         AdditionalCreateRequestDTO dto = new AdditionalCreateRequestDTO();
         AdditionalCreateRequestDTO.Embedded embedded = new AdditionalCreateRequestDTO.Embedded();
         embedded.setUserId(1L);
@@ -173,7 +177,7 @@ class AdditionalManagementImplTest {
 
     // update
     @Test
-    void testUpdate_success_noChanges() {
+    void update_success_noChanges() { // mã test case 3:
         AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
         dto.setId(1L);
 
@@ -187,10 +191,11 @@ class AdditionalManagementImplTest {
         assertThat(result.get().getId()).isEqualTo(1L);
         verify(additionalRepository, times(1)).findById(1L);
         verify(additionalRepository, times(1)).save(testAdditional);
+        verifyNoInteractions(userRepository, organizationRepository);
     }
 
     @Test
-    void testUpdate_success_withNewUserAndOrg() {
+    void update_success_withNewUserAndOrg() { // mã test case 3:
         AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
         dto.setId(1L);
         AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
@@ -218,7 +223,132 @@ class AdditionalManagementImplTest {
     }
 
     @Test
-    void testUpdate_failure_notFound() {
+    void update_success_withSameUserAndOrg() { // mã test case 3:
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
+        embedded.setUserId(1L);
+        embedded.setOrganizationId(1L);
+        dto.setEmbedded(embedded);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
+        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isSuccess()).isTrue();
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(additionalRepository, times(1)).save(testAdditional);
+        verifyNoInteractions(userRepository, organizationRepository);
+    }
+
+    @Test
+    void update_success_withSameUserDifferentOrg() { // mã test case 3:
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
+        embedded.setUserId(1L);
+        embedded.setOrganizationId(2L);
+        dto.setEmbedded(embedded);
+
+        Organization newOrg = new Organization();
+        newOrg.setId(2L);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
+        when(organizationRepository.findById(2L)).thenReturn(Optional.of(newOrg));
+        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isSuccess()).isTrue();
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(organizationRepository, times(1)).findById(2L);
+        verify(additionalRepository, times(1)).save(testAdditional);
+        verifyNoInteractions(userRepository);
+    }
+
+    @Test
+    void update_success_withDifferentUserSameOrg() { // mã test case 3:
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
+        embedded.setUserId(2L);
+        embedded.setOrganizationId(1L);
+        dto.setEmbedded(embedded);
+
+        User newUser = new User();
+        newUser.setId(2L);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
+        when(userRepository.findById(2L)).thenReturn(Optional.of(newUser));
+        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isSuccess()).isTrue();
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(userRepository, times(1)).findById(2L);
+        verify(additionalRepository, times(1)).save(testAdditional);
+        verifyNoInteractions(organizationRepository);
+    }
+
+    @Test
+    void update_success_withNullUserIdNonNullOrgId() { // mã test case 3:
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
+        embedded.setUserId(null); // Explicitly null
+        embedded.setOrganizationId(2L); // Non-null, different
+        dto.setEmbedded(embedded);
+
+        Organization newOrg = new Organization();
+        newOrg.setId(2L);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
+        when(organizationRepository.findById(2L)).thenReturn(Optional.of(newOrg));
+        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isSuccess()).isTrue();
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(organizationRepository, times(1)).findById(2L);
+        verify(additionalRepository, times(1)).save(testAdditional);
+        verifyNoInteractions(userRepository); // userId == null -> false
+    }
+
+    @Test
+    void update_success_withNonNullUserIdNullOrgId() { // mã test case 3:
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
+        embedded.setUserId(2L); // Non-null, different
+        embedded.setOrganizationId(null); // Explicitly null
+        dto.setEmbedded(embedded);
+
+        User newUser = new User();
+        newUser.setId(2L);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
+        when(userRepository.findById(2L)).thenReturn(Optional.of(newUser));
+        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isSuccess()).isTrue();
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(userRepository, times(1)).findById(2L);
+        verify(additionalRepository, times(1)).save(testAdditional);
+        verifyNoInteractions(organizationRepository); // organizationId == null -> false
+    }
+
+    @Test
+    void update_fail_notFound() { // mã test case 3:
         AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
         dto.setId(1L);
 
@@ -230,10 +360,9 @@ class AdditionalManagementImplTest {
         assertThat(result.getCause().getMessage()).contains("Failure when find additional to update with id: 1");
         verify(additionalRepository, times(1)).findById(1L);
     }
-
     // delete
     @Test
-    void testDelete_success() {
+    void delete_success() { // mã test case 4: xóa 1 đợt bổ sung thành công
         doNothing().when(additionalRepository).deleteById(1L);
 
         Try<Boolean> result = additionalManagement.delete(1L);
@@ -244,7 +373,7 @@ class AdditionalManagementImplTest {
     }
 
     @Test
-    void testDelete_failure() {
+    void delete_fail() { // mã test case 4: xóa 1 đợt bổ sung thất bại
         doThrow(new RuntimeException("DB error")).when(additionalRepository).deleteById(1L);
 
         Try<Boolean> result = additionalManagement.delete(1L);
@@ -256,7 +385,7 @@ class AdditionalManagementImplTest {
 
     // fetchAll
     @Test
-    void testFetchAll_success() {
+    void fetchAll_success() { // mã test case 5: lấy danh sách thành công
         when(additionalRepository.findAll()).thenReturn(Collections.singletonList(testAdditional));
 
         List<Additional> result = additionalManagement.fetchAll();
@@ -267,7 +396,7 @@ class AdditionalManagementImplTest {
     }
 
     @Test
-    void testFetchAll_empty() {
+    void fetchAll_empty() { // mã test case 5: lấy ra danh sách rỗng
         when(additionalRepository.findAll()).thenReturn(Collections.emptyList());
 
         List<Additional> result = additionalManagement.fetchAll();
@@ -278,7 +407,7 @@ class AdditionalManagementImplTest {
 
     // changeStatus
     @Test
-    void testChangeStatus_success() {
+    void changeStatus_success() { // mã test case 6: đổi trạng thái từ true sang false thành công
         AdditionalChangeStatusRequestDTO dto = new AdditionalChangeStatusRequestDTO();
         dto.setId(1L);
         dto.setStatus(false);
@@ -296,7 +425,7 @@ class AdditionalManagementImplTest {
     }
 
     @Test
-    void testChangeStatus_failure_notFound() {
+    void changeStatus_fail_notFound() { // mã test case 6: đổi trạng thái thất bại không tìm thấy Additional theo ID
         AdditionalChangeStatusRequestDTO dto = new AdditionalChangeStatusRequestDTO();
         dto.setId(1L);
         dto.setStatus(false);
@@ -306,12 +435,12 @@ class AdditionalManagementImplTest {
         Try<Boolean> result = additionalManagement.changeStatus(dto);
 
         assertThat(result.isFailure()).isTrue();
-        assertThat(result.getCause().getMessage()).contains("Failure when find additional with id: 1");
+        assertThat(result.getCause().getMessage()).contains("Failure when find additional with id:1");
         verify(additionalRepository, times(1)).findById(1L);
     }
 
     @Test
-    void testChangeStatus_failure_sameStatus() {
+    void changeStatus_fail_sameStatus() { // mã test case 6: đổi trạng thái thất bại do vẫn giữ nguyên trạng thái True -> True
         AdditionalChangeStatusRequestDTO dto = new AdditionalChangeStatusRequestDTO();
         dto.setId(1L);
         dto.setStatus(true);
@@ -326,7 +455,7 @@ class AdditionalManagementImplTest {
     }
 
     @Test
-    void testChangeStatus_failure_turnBackToTrue() {
+    void changeStatus_fail_turnBackToTrue() { // mã test case 6: đổi trạng thái thất bại do từ False -> True
         AdditionalChangeStatusRequestDTO dto = new AdditionalChangeStatusRequestDTO();
         dto.setId(1L);
         dto.setStatus(true);

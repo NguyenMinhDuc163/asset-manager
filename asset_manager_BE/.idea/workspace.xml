@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9424f87f-00d8-409d-a013-70fcfa0e92ad" name="Default Changelist" comment="" />
+    <list default="true" id="9424f87f-00d8-409d-a013-70fcfa0e92ad" name="Default Changelist" comment="# enable security for api endpoint&#10;# Add content message in scan QR code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +40,8 @@
     "Application.Asset Application.executor": "Run",
     "Docker.Dockerfile build.executor": "Run",
     "JUnit.AdditionalManagementImplTest.executor": "Coverage",
+    "JUnit.AdditionalManagementImplTest.testGetOne_fail_notFound.executor": "Run",
+    "JUnit.AdditionalManagementImplTest.testGetOne_success.executor": "Coverage",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -67,6 +69,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev\graduating-space\source-code\Asset\src\main\resources\public\image" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ptit.asset.service.manager.impl" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.AdditionalManagementImplTest">
     <configuration name="Asset Application" type="Application" factoryName="Application">
@@ -93,13 +98,45 @@
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ptit.asset.service.*" />
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ptit.asset.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.AdditionalManagementImplTest" />
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdditionalManagementImplTest.testGetOne_fail_notFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Asset" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
+      <option name="METHOD_NAME" value="testGetOne_fail_notFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdditionalManagementImplTest.testGetOne_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Asset" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
+      <option name="METHOD_NAME" value="testGetOne_success" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,12 +169,16 @@
       <item itemvalue="Application.Asset Application" />
       <item itemvalue="Application.QRCodeGenerator" />
       <item itemvalue="Docker.Dockerfile build" />
+      <item itemvalue="JUnit.AdditionalManagementImplTest.testGetOne_fail_notFound" />
+      <item itemvalue="JUnit.AdditionalManagementImplTest.testGetOne_success" />
       <item itemvalue="JUnit.AdditionalManagementImplTest" />
       <item itemvalue="Spring Boot.AssetApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AdditionalManagementImplTest" />
+        <item itemvalue="JUnit.AdditionalManagementImplTest.testGetOne_fail_notFound" />
+        <item itemvalue="JUnit.AdditionalManagementImplTest.testGetOne_success" />
         <item itemvalue="Docker.Dockerfile build" />
         <item itemvalue="Application.QRCodeGenerator" />
       </list>
@@ -152,6 +193,9 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Physical" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -167,7 +211,12 @@
       <workItem from="1741601689704" duration="247000" />
       <workItem from="1741624454480" duration="2589000" />
       <workItem from="1743866998339" duration="54000" />
-      <workItem from="1744009075426" duration="15402000" />
+      <workItem from="1744009075426" duration="17255000" />
+      <workItem from="1744178142813" duration="343000" />
+      <workItem from="1744182032070" duration="10673000" />
+      <workItem from="1744198554783" duration="8641000" />
+      <workItem from="1744270805648" duration="5556000" />
+      <workItem from="1744292695538" duration="10221000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1602485942280</created>
@@ -481,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="# add init data when start application" />
     <MESSAGE value="# add dependency for next step export excel&#10;# add cross origin for api&#10;# add fetch All for some entity" />
     <MESSAGE value="# change return type response on http request" />
     <MESSAGE value="# change size of name product validation&#10;# add a role&#10;# add statistical basic" />
@@ -505,12 +553,19 @@
     <MESSAGE value="# add authorization api&#10;# add extended info about value of material" />
     <MESSAGE value="# remove auth for space resources&#10;# fix filter at material" />
     <MESSAGE value="# add extended info for api filter material&#10;# add more property for request body api filter" />
+    <MESSAGE value="first unit test" />
     <MESSAGE value="# enable security for api endpoint&#10;# Add content message in scan QR code" />
     <option name="LAST_COMMIT_MESSAGE" value="# enable security for api endpoint&#10;# Add content message in scan QR code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest.ic" NAME="AdditionalManagementImplTest Coverage Results" MODIFIED="1744041009164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.ptit.asset.service.*</FILTER>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest.ic" NAME="AdditionalManagementImplTest Coverage Results" MODIFIED="1744302754184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_testGetOne_success.ic" NAME="AdditionalManagementImplTest.testGetOne_success Coverage Results" MODIFIED="1744193699068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_testGetOne_fail_notFound.ic" NAME="AdditionalManagementImplTest.testGetOne_fail_notFound Coverage Results" MODIFIED="1744293149382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
   </component>
 </project>

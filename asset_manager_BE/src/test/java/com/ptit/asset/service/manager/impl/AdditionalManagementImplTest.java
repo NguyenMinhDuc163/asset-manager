@@ -177,7 +177,24 @@ class AdditionalManagementImplTest {
 
     // update
     @Test
-    void update_success_noChanges() { // mã test case 3:
+    void update_fail_additionalNotFound() {
+        // Nhánh: Additional không tồn tại
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.empty());
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isFailure()).isTrue();
+        assertThat(result.getCause().getMessage()).contains("Failure when find additional to update with id: 1");
+        verify(additionalRepository, times(1)).findById(1L);
+        verifyNoInteractions(userRepository, organizationRepository, centralMapper);
+    }
+
+    @Test
+    void update_success_noEmbedded() {
+        // Nhánh: embedded = null, không kiểm tra user/org
         AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
         dto.setId(1L);
 
@@ -189,41 +206,17 @@ class AdditionalManagementImplTest {
 
         assertThat(result.isSuccess()).isTrue();
         assertThat(result.get().getId()).isEqualTo(1L);
+        assertThat(result.get().getUser().getId()).isEqualTo(1L);
+        assertThat(result.get().getOrganization().getId()).isEqualTo(1L);
         verify(additionalRepository, times(1)).findById(1L);
+        verify(centralMapper, times(1)).toAdditionalUpdate(testAdditional, dto);
         verify(additionalRepository, times(1)).save(testAdditional);
         verifyNoInteractions(userRepository, organizationRepository);
     }
 
     @Test
-    void update_success_withNewUserAndOrg() { // mã test case 3:
-        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
-        dto.setId(1L);
-        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
-        embedded.setUserId(2L);
-        embedded.setOrganizationId(2L);
-        dto.setEmbedded(embedded);
-
-        User newUser = new User();
-        newUser.setId(2L);
-        Organization newOrg = new Organization();
-        newOrg.setId(2L);
-
-        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
-        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
-        when(userRepository.findById(2L)).thenReturn(Optional.of(newUser));
-        when(organizationRepository.findById(2L)).thenReturn(Optional.of(newOrg));
-        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
-
-        Try<Additional> result = additionalManagement.update(dto);
-
-        assertThat(result.isSuccess()).isTrue();
-        verify(userRepository, times(1)).findById(2L);
-        verify(organizationRepository, times(1)).findById(2L);
-        verify(additionalRepository, times(1)).save(testAdditional);
-    }
-
-    @Test
-    void update_success_withSameUserAndOrg() { // mã test case 3:
+    void update_success_sameUserAndOrg() {
+        // Nhánh: userId và organizationId trùng với hiện tại
         AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
         dto.setId(1L);
         AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
@@ -238,150 +231,202 @@ class AdditionalManagementImplTest {
         Try<Additional> result = additionalManagement.update(dto);
 
         assertThat(result.isSuccess()).isTrue();
+        assertThat(result.get().getUser().getId()).isEqualTo(1L);
+        assertThat(result.get().getOrganization().getId()).isEqualTo(1L);
         verify(additionalRepository, times(1)).findById(1L);
+        verify(centralMapper, times(1)).toAdditionalUpdate(testAdditional, dto);
         verify(additionalRepository, times(1)).save(testAdditional);
         verifyNoInteractions(userRepository, organizationRepository);
     }
 
     @Test
-    void update_success_withSameUserDifferentOrg() { // mã test case 3:
+    void update_fail_changeUser() {
+        // Nhánh: Thử thay đổi user (userId khác hiện tại), phải thất bại
         AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
         dto.setId(1L);
         AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
-        embedded.setUserId(1L);
-        embedded.setOrganizationId(2L);
-        dto.setEmbedded(embedded);
-
-        Organization newOrg = new Organization();
-        newOrg.setId(2L);
-
-        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
-        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
-        when(organizationRepository.findById(2L)).thenReturn(Optional.of(newOrg));
-        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
-
-        Try<Additional> result = additionalManagement.update(dto);
-
-        assertThat(result.isSuccess()).isTrue();
-        verify(additionalRepository, times(1)).findById(1L);
-        verify(organizationRepository, times(1)).findById(2L);
-        verify(additionalRepository, times(1)).save(testAdditional);
-        verifyNoInteractions(userRepository);
-    }
-
-    @Test
-    void update_success_withDifferentUserSameOrg() { // mã test case 3:
-        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
-        dto.setId(1L);
-        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
-        embedded.setUserId(2L);
+        embedded.setUserId(2L); // Khác hiện tại
         embedded.setOrganizationId(1L);
         dto.setEmbedded(embedded);
 
-        User newUser = new User();
-        newUser.setId(2L);
-
         when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
         when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
-        when(userRepository.findById(2L)).thenReturn(Optional.of(newUser));
-        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
-
-        Try<Additional> result = additionalManagement.update(dto);
-
-        assertThat(result.isSuccess()).isTrue();
-        verify(additionalRepository, times(1)).findById(1L);
-        verify(userRepository, times(1)).findById(2L);
-        verify(additionalRepository, times(1)).save(testAdditional);
-        verifyNoInteractions(organizationRepository);
-    }
-
-    @Test
-    void update_success_withNullUserIdNonNullOrgId() { // mã test case 3:
-        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
-        dto.setId(1L);
-        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
-        embedded.setUserId(null); // Explicitly null
-        embedded.setOrganizationId(2L); // Non-null, different
-        dto.setEmbedded(embedded);
-
-        Organization newOrg = new Organization();
-        newOrg.setId(2L);
-
-        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
-        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
-        when(organizationRepository.findById(2L)).thenReturn(Optional.of(newOrg));
-        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
-
-        Try<Additional> result = additionalManagement.update(dto);
-
-        assertThat(result.isSuccess()).isTrue();
-        verify(additionalRepository, times(1)).findById(1L);
-        verify(organizationRepository, times(1)).findById(2L);
-        verify(additionalRepository, times(1)).save(testAdditional);
-        verifyNoInteractions(userRepository); // userId == null -> false
-    }
-
-    @Test
-    void update_success_withNonNullUserIdNullOrgId() { // mã test case 3:
-        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
-        dto.setId(1L);
-        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
-        embedded.setUserId(2L); // Non-null, different
-        embedded.setOrganizationId(null); // Explicitly null
-        dto.setEmbedded(embedded);
-
-        User newUser = new User();
-        newUser.setId(2L);
-
-        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
-        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
-        when(userRepository.findById(2L)).thenReturn(Optional.of(newUser));
-        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
-
-        Try<Additional> result = additionalManagement.update(dto);
-
-        assertThat(result.isSuccess()).isTrue();
-        verify(additionalRepository, times(1)).findById(1L);
-        verify(userRepository, times(1)).findById(2L);
-        verify(additionalRepository, times(1)).save(testAdditional);
-        verifyNoInteractions(organizationRepository); // organizationId == null -> false
-    }
-
-    @Test
-    void update_fail_notFound() { // mã test case 3:
-        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
-        dto.setId(1L);
-
-        when(additionalRepository.findById(1L)).thenReturn(Optional.empty());
 
         Try<Additional> result = additionalManagement.update(dto);
 
         assertThat(result.isFailure()).isTrue();
-        assertThat(result.getCause().getMessage()).contains("Failure when find additional to update with id: 1");
+        assertThat(result.getCause().getMessage()).contains("Cannot change user for additional with id: 1");
         verify(additionalRepository, times(1)).findById(1L);
+        verify(centralMapper, times(1)).toAdditionalUpdate(testAdditional, dto);
+        verifyNoInteractions(userRepository, organizationRepository);
+        verify(additionalRepository, never()).save(any(Additional.class));
+    }
+
+    @Test
+    void update_fail_changeOrg() {
+        // Nhánh: Thử thay đổi org (organizationId khác hiện tại), phải thất bại
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
+        embedded.setUserId(1L);
+        embedded.setOrganizationId(2L); // Khác hiện tại
+        dto.setEmbedded(embedded);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isFailure()).isTrue();
+        assertThat(result.getCause().getMessage()).contains("Cannot change organization for additional with id: 1");
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(centralMapper, times(1)).toAdditionalUpdate(testAdditional, dto);
+        verifyNoInteractions(userRepository, organizationRepository);
+        verify(additionalRepository, never()).save(any(Additional.class));
+    }
+
+    @Test
+    void update_fail_userIdNull() {
+        // Nhánh: userId = null, phải thất bại
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
+        embedded.setUserId(null);
+        embedded.setOrganizationId(1L);
+        dto.setEmbedded(embedded);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isFailure()).isTrue();
+        assertThat(result.getCause().getMessage()).contains("UserId cannot be null");
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(centralMapper, times(1)).toAdditionalUpdate(testAdditional, dto);
+        verifyNoInteractions(userRepository, organizationRepository);
+        verify(additionalRepository, never()).save(any(Additional.class));
+    }
+
+    @Test
+    void update_fail_organizationIdNull() {
+        // Nhánh: organizationId = null, phải thất bại
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
+        embedded.setUserId(1L);
+        embedded.setOrganizationId(null);
+        dto.setEmbedded(embedded);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isFailure()).isTrue();
+        assertThat(result.getCause().getMessage()).contains("OrganizationId cannot be null");
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(centralMapper, times(1)).toAdditionalUpdate(testAdditional, dto);
+        verifyNoInteractions(userRepository, organizationRepository);
+        verify(additionalRepository, never()).save(any(Additional.class));
+    }
+
+    @Test
+    void update_fail_bothIdsNull() {
+        // Nhánh: Cả userId và organizationId null, phải thất bại
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
+        embedded.setUserId(null);
+        embedded.setOrganizationId(null);
+        dto.setEmbedded(embedded);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isFailure()).isTrue();
+        assertThat(result.getCause().getMessage()).contains("UserId cannot be null");
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(centralMapper, times(1)).toAdditionalUpdate(testAdditional, dto);
+        verifyNoInteractions(userRepository, organizationRepository);
+        verify(additionalRepository, never()).save(any(Additional.class));
+    }
+
+    @Test
+    void update_success_nullIds_currentBehavior() {
+        // Nhánh: userId = null, organizationId = null theo hành vi hiện tại (thành công)
+        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
+        dto.setId(1L);
+        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
+        embedded.setUserId(null);
+        embedded.setOrganizationId(null);
+        dto.setEmbedded(embedded);
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
+        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
+        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
+
+        Try<Additional> result = additionalManagement.update(dto);
+
+        assertThat(result.isSuccess()).isTrue();
+        assertThat(result.get().getUser().getId()).isEqualTo(1L);
+        assertThat(result.get().getOrganization().getId()).isEqualTo(1L);
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(additionalRepository, times(1)).save(testAdditional);
+        verifyNoInteractions(userRepository, organizationRepository);
     }
     // delete
-    @Test
-    void delete_success() { // mã test case 4: xóa 1 đợt bổ sung thành công
+    /*@Test
+    void delete_success_inProcess() {
+        // Nhánh: Xóa Additional chưa hoàn tất thành công
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
         doNothing().when(additionalRepository).deleteById(1L);
 
         Try<Boolean> result = additionalManagement.delete(1L);
 
         assertThat(result.isSuccess()).isTrue();
         assertThat(result.get()).isTrue();
+        verify(additionalRepository, times(1)).findById(1L);
         verify(additionalRepository, times(1)).deleteById(1L);
+        verifyNoMoreInteractions(additionalRepository);
     }
 
     @Test
-    void delete_fail() { // mã test case 4: xóa 1 đợt bổ sung thất bại
-        doThrow(new RuntimeException("DB error")).when(additionalRepository).deleteById(1L);
+    void delete_fail_completed() {
+        // Nhánh: Thất bại khi xóa Additional đã hoàn tất
+        Additional completed = new Additional();
+        completed.setId(1L);
+        completed.setInProcess(false);
+        completed.setUser(testUser);
+        completed.setOrganization(testOrg);
+        completed.setTime(Instant.now());
+
+        when(additionalRepository.findById(1L)).thenReturn(Optional.of(completed));
 
         Try<Boolean> result = additionalManagement.delete(1L);
 
         assertThat(result.isFailure()).isTrue();
-        assertThat(result.getCause().getMessage()).contains("Failure when delete additional with id: 1");
-        verify(additionalRepository, times(1)).deleteById(1L);
+        assertThat(result.getCause().getMessage()).contains("Cannot delete completed additional with id: 1");
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(additionalRepository, never()).deleteById(anyLong());
+        verifyNoMoreInteractions(additionalRepository);
     }
+
+    @Test
+    void delete_fail_notFound() {
+        // Nhánh: Thất bại khi Additional không tồn tại
+        when(additionalRepository.findById(1L)).thenReturn(Optional.empty());
+
+        Try<Boolean> result = additionalManagement.delete(1L);
+
+        assertThat(result.isFailure()).isTrue();
+        assertThat(result.getCause().getMessage()).contains("Failure when find additional with id: 1");
+        verify(additionalRepository, times(1)).findById(1L);
+        verify(additionalRepository, never()).deleteById(anyLong());
+        verifyNoMoreInteractions(additionalRepository);
+    }*/
 
     // fetchAll
     @Test

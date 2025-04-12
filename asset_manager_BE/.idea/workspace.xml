@@ -39,9 +39,11 @@
   "keyToString": {
     "Application.Asset Application.executor": "Run",
     "Docker.Dockerfile build.executor": "Run",
+    "JUnit.AdditionalManagementImplTest.delete_success_inProcess.executor": "Run",
     "JUnit.AdditionalManagementImplTest.executor": "Coverage",
     "JUnit.AdditionalManagementImplTest.testGetOne_fail_notFound.executor": "Run",
     "JUnit.AdditionalManagementImplTest.testGetOne_success.executor": "Coverage",
+    "JUnit.LiquidateManagementImplTest.executor": "Debug",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -81,19 +83,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QRCodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.spacetest.QRCodeGenerator" />
-      <module name="Asset" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ptit.asset.spacetest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AdditionalManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
@@ -105,6 +94,22 @@
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdditionalManagementImplTest.delete_success_inProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Asset" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
+      <option name="METHOD_NAME" value="delete_success_inProcess" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,23 +146,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LiquidateManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Asset" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.LiquidateManagementImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AssetApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Asset" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ptit.asset.AssetApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="imageTag" value="maven3.6.3-openjdk-8_build" />
-          <option name="buildCliOptions" value="--target build" />
-          <option name="buildOnly" value="true" />
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
@@ -167,8 +176,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.Asset Application" />
-      <item itemvalue="Application.QRCodeGenerator" />
-      <item itemvalue="Docker.Dockerfile build" />
+      <item itemvalue="JUnit.AdditionalManagementImplTest.delete_success_inProcess" />
+      <item itemvalue="JUnit.LiquidateManagementImplTest" />
       <item itemvalue="JUnit.AdditionalManagementImplTest.testGetOne_fail_notFound" />
       <item itemvalue="JUnit.AdditionalManagementImplTest.testGetOne_success" />
       <item itemvalue="JUnit.AdditionalManagementImplTest" />
@@ -177,10 +186,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.AdditionalManagementImplTest" />
+        <item itemvalue="JUnit.AdditionalManagementImplTest.delete_success_inProcess" />
+        <item itemvalue="JUnit.LiquidateManagementImplTest" />
         <item itemvalue="JUnit.AdditionalManagementImplTest.testGetOne_fail_notFound" />
         <item itemvalue="JUnit.AdditionalManagementImplTest.testGetOne_success" />
-        <item itemvalue="Docker.Dockerfile build" />
-        <item itemvalue="Application.QRCodeGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +225,9 @@
       <workItem from="1744182032070" duration="10673000" />
       <workItem from="1744198554783" duration="8641000" />
       <workItem from="1744270805648" duration="5556000" />
-      <workItem from="1744292695538" duration="10221000" />
+      <workItem from="1744292695538" duration="11397000" />
+      <workItem from="1744351808605" duration="1246000" />
+      <workItem from="1744446059307" duration="7390000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1602485942280</created>
@@ -558,10 +569,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="# enable security for api endpoint&#10;# Add content message in scan QR code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest.ic" NAME="AdditionalManagementImplTest Coverage Results" MODIFIED="1744302754184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest.ic" NAME="AdditionalManagementImplTest Coverage Results" MODIFIED="1744452067216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_testGetOne_success.ic" NAME="AdditionalManagementImplTest.testGetOne_success Coverage Results" MODIFIED="1744193699068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$LiquidateManagementImplTest.ic" NAME="LiquidateManagementImplTest Coverage Results" MODIFIED="1744448369103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_testGetOne_fail_notFound.ic" NAME="AdditionalManagementImplTest.testGetOne_fail_notFound Coverage Results" MODIFIED="1744293149382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

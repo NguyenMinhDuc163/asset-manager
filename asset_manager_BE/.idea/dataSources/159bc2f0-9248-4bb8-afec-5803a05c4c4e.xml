@@ -16555,9 +16555,18 @@
     <collation id="5509" parent="1" name="Yakut_100_CS_AS_WS_SC_UTF8">
       <Description>Yakut-100, case-sensitive, accent-sensitive, kanatype-insensitive, width-sensitive, supplementary characters, UTF8</Description>
     </collation>
-    <database id="5510" parent="1" name="master">
+    <database id="5510" parent="1" name="asset_db">
+      <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@c2a6470220d0</Fingerprint>
+      <Grants>5|database||1|connect|G
+5|database||0|view any column encryption key definition|G
+5|database||0|view any column master key definition|G</Grants>
+      <ObjectId>5</ObjectId>
+      <PermissionsCheckSum>3196235284</PermissionsCheckSum>
+      <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
+    </database>
+    <database id="5511" parent="1" name="master">
       <Current>1</Current>
-      <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@370721b7b122</Fingerprint>
+      <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@c2a6470220d0</Fingerprint>
       <Grants>1|database||1|connect|G
 1|database||2|connect|G
 1|database||5|connect|G
@@ -16569,29 +16578,20 @@
       <PermissionsCheckSum>7998723517</PermissionsCheckSum>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5511" parent="1" name="model">
+    <database id="5512" parent="1" name="model">
       <ObjectId>3</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5512" parent="1" name="msdb">
+    <database id="5513" parent="1" name="msdb">
       <ObjectId>4</ObjectId>
-      <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
-    </database>
-    <database id="5513" parent="1" name="springboot_asset_dev">
-      <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@370721b7b122</Fingerprint>
-      <Grants>5|database||1|connect|G
-5|database||0|view any column encryption key definition|G
-5|database||0|view any column master key definition|G</Grants>
-      <ObjectId>5</ObjectId>
-      <PermissionsCheckSum>3196235284</PermissionsCheckSum>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
     <database id="5514" parent="1" name="tempdb">
       <ObjectId>2</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <linked-server id="5515" parent="1" name="370721b7b122">
-      <DataSource>370721b7b122</DataSource>
+    <linked-server id="5515" parent="1" name="c2a6470220d0">
+      <DataSource>c2a6470220d0</DataSource>
       <Product>SQL Server</Product>
       <ProviderName>SQLNCLI</ProviderName>
     </linked-server>
@@ -16739,247 +16739,260 @@
       <AuthType>none</AuthType>
       <ObjectId>4</ObjectId>
     </role>
-    <role id="5544" parent="5510" name="##MS_PolicyEventProcessingLogin##">
+    <role id="5544" parent="5510" name="db_owner">
+      <AuthType>none</AuthType>
+      <ObjectId>16384</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5545" parent="5510" name="db_accessadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16385</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5546" parent="5510" name="db_securityadmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16386</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5547" parent="5510" name="db_ddladmin">
+      <AuthType>none</AuthType>
+      <ObjectId>16387</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5548" parent="5510" name="db_backupoperator">
+      <AuthType>none</AuthType>
+      <ObjectId>16389</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5549" parent="5510" name="db_datareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16390</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5550" parent="5510" name="db_datawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16391</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5551" parent="5510" name="db_denydatareader">
+      <AuthType>none</AuthType>
+      <ObjectId>16392</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5552" parent="5510" name="db_denydatawriter">
+      <AuthType>none</AuthType>
+      <ObjectId>16393</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <schema id="5553" parent="5510" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="5554" parent="5510" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="5555" parent="5510" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="5556" parent="5510" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="5557" parent="5510" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="5558" parent="5510" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="5559" parent="5510" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="5560" parent="5510" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <schema id="5561" parent="5510" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="5562" parent="5510" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="5563" parent="5510" name="dbo">
+      <Current>1</Current>
+      <LastIntrospectionLocalTimestamp>2025-03-08.14:01:23</LastIntrospectionLocalTimestamp>
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="5564" parent="5510" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="5565" parent="5510" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <assembly id="5566" parent="5511" name="Microsoft.SqlServer.Types">
+      <ObjectId>1</ObjectId>
+      <Visible>1</Visible>
+    </assembly>
+    <filegroup id="5567" parent="5511" name="PRIMARY">
+      <DefaultGroup>1</DefaultGroup>
+      <ObjectId>1</ObjectId>
+    </filegroup>
+    <role id="5568" parent="5511" name="public">
+      <AuthType>none</AuthType>
+      <ObjectId>0</ObjectId>
+      <Type>database-role</Type>
+      <OwnerId>1</OwnerId>
+    </role>
+    <role id="5569" parent="5511" name="dbo">
+      <AuthType>instance</AuthType>
+      <DefaultSchema>dbo</DefaultSchema>
+      <ObjectId>1</ObjectId>
+    </role>
+    <role id="5570" parent="5511" name="guest">
+      <AuthType>none</AuthType>
+      <DefaultSchema>guest</DefaultSchema>
+      <ObjectId>2</ObjectId>
+    </role>
+    <role id="5571" parent="5511" name="INFORMATION_SCHEMA">
+      <AuthType>none</AuthType>
+      <ObjectId>3</ObjectId>
+    </role>
+    <role id="5572" parent="5511" name="sys">
+      <AuthType>none</AuthType>
+      <ObjectId>4</ObjectId>
+    </role>
+    <role id="5573" parent="5511" name="##MS_PolicyEventProcessingLogin##">
       <AuthType>instance</AuthType>
       <DefaultSchema>dbo</DefaultSchema>
       <ObjectId>5</ObjectId>
     </role>
-    <role id="5545" parent="5510" name="##MS_AgentSigningCertificate##">
+    <role id="5574" parent="5511" name="##MS_AgentSigningCertificate##">
       <AuthType>none</AuthType>
       <ObjectId>6</ObjectId>
       <Type>certificate-mapped-user</Type>
     </role>
-    <role id="5546" parent="5510" name="db_owner">
+    <role id="5575" parent="5511" name="db_owner">
       <AuthType>none</AuthType>
       <ObjectId>16384</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5547" parent="5510" name="db_accessadmin">
+    <role id="5576" parent="5511" name="db_accessadmin">
       <AuthType>none</AuthType>
       <ObjectId>16385</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5548" parent="5510" name="db_securityadmin">
+    <role id="5577" parent="5511" name="db_securityadmin">
       <AuthType>none</AuthType>
       <ObjectId>16386</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5549" parent="5510" name="db_ddladmin">
+    <role id="5578" parent="5511" name="db_ddladmin">
       <AuthType>none</AuthType>
       <ObjectId>16387</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5550" parent="5510" name="db_backupoperator">
+    <role id="5579" parent="5511" name="db_backupoperator">
       <AuthType>none</AuthType>
       <ObjectId>16389</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5551" parent="5510" name="db_datareader">
+    <role id="5580" parent="5511" name="db_datareader">
       <AuthType>none</AuthType>
       <ObjectId>16390</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5552" parent="5510" name="db_datawriter">
+    <role id="5581" parent="5511" name="db_datawriter">
       <AuthType>none</AuthType>
       <ObjectId>16391</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5553" parent="5510" name="db_denydatareader">
+    <role id="5582" parent="5511" name="db_denydatareader">
       <AuthType>none</AuthType>
       <ObjectId>16392</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <role id="5554" parent="5510" name="db_denydatawriter">
+    <role id="5583" parent="5511" name="db_denydatawriter">
       <AuthType>none</AuthType>
       <ObjectId>16393</ObjectId>
       <Type>database-role</Type>
       <OwnerId>1</OwnerId>
     </role>
-    <schema id="5555" parent="5510" name="INFORMATION_SCHEMA">
+    <schema id="5584" parent="5511" name="INFORMATION_SCHEMA">
       <ObjectId>3</ObjectId>
     </schema>
-    <schema id="5556" parent="5510" name="db_accessadmin">
+    <schema id="5585" parent="5511" name="db_accessadmin">
       <ObjectId>16385</ObjectId>
     </schema>
-    <schema id="5557" parent="5510" name="db_backupoperator">
+    <schema id="5586" parent="5511" name="db_backupoperator">
       <ObjectId>16389</ObjectId>
     </schema>
-    <schema id="5558" parent="5510" name="db_datareader">
+    <schema id="5587" parent="5511" name="db_datareader">
       <ObjectId>16390</ObjectId>
     </schema>
-    <schema id="5559" parent="5510" name="db_datawriter">
+    <schema id="5588" parent="5511" name="db_datawriter">
       <ObjectId>16391</ObjectId>
     </schema>
-    <schema id="5560" parent="5510" name="db_ddladmin">
+    <schema id="5589" parent="5511" name="db_ddladmin">
       <ObjectId>16387</ObjectId>
     </schema>
-    <schema id="5561" parent="5510" name="db_denydatareader">
+    <schema id="5590" parent="5511" name="db_denydatareader">
       <ObjectId>16392</ObjectId>
     </schema>
-    <schema id="5562" parent="5510" name="db_denydatawriter">
+    <schema id="5591" parent="5511" name="db_denydatawriter">
       <ObjectId>16393</ObjectId>
     </schema>
-    <schema id="5563" parent="5510" name="db_owner">
+    <schema id="5592" parent="5511" name="db_owner">
       <ObjectId>16384</ObjectId>
     </schema>
-    <schema id="5564" parent="5510" name="db_securityadmin">
+    <schema id="5593" parent="5511" name="db_securityadmin">
       <ObjectId>16386</ObjectId>
     </schema>
-    <schema id="5565" parent="5510" name="dbo">
+    <schema id="5594" parent="5511" name="dbo">
       <Current>1</Current>
       <Grants>117575457|||0|select|G
 133575514|||0|select|G
 149575571|||0|select|G
 1787153412|||0|select|G
 1803153469|||0|select|G</Grants>
-      <IntrospectionTimestamp>2025-03-08.20:00:20.020</IntrospectionTimestamp>
-      <LastIntrospectionLocalTimestamp>2025-03-08.13:00:19</LastIntrospectionLocalTimestamp>
+      <IntrospectionTimestamp>2025-04-04.14:57:09.123</IntrospectionTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-04-04.07:57:09</LastIntrospectionLocalTimestamp>
       <ObjectId>1</ObjectId>
       <PermissionsCheckSum>7026290343</PermissionsCheckSum>
     </schema>
-    <schema id="5566" parent="5510" name="guest">
+    <schema id="5595" parent="5511" name="guest">
       <ObjectId>2</ObjectId>
     </schema>
-    <schema id="5567" parent="5510" name="sys">
+    <schema id="5596" parent="5511" name="sys">
       <ObjectId>4</ObjectId>
     </schema>
-    <assembly id="5568" parent="5513" name="Microsoft.SqlServer.Types">
-      <ObjectId>1</ObjectId>
-      <Visible>1</Visible>
-    </assembly>
-    <filegroup id="5569" parent="5513" name="PRIMARY">
-      <DefaultGroup>1</DefaultGroup>
-      <ObjectId>1</ObjectId>
-    </filegroup>
-    <role id="5570" parent="5513" name="public">
-      <AuthType>none</AuthType>
-      <ObjectId>0</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5571" parent="5513" name="dbo">
-      <AuthType>instance</AuthType>
-      <DefaultSchema>dbo</DefaultSchema>
-      <ObjectId>1</ObjectId>
-    </role>
-    <role id="5572" parent="5513" name="guest">
-      <AuthType>none</AuthType>
-      <DefaultSchema>guest</DefaultSchema>
-      <ObjectId>2</ObjectId>
-    </role>
-    <role id="5573" parent="5513" name="INFORMATION_SCHEMA">
-      <AuthType>none</AuthType>
-      <ObjectId>3</ObjectId>
-    </role>
-    <role id="5574" parent="5513" name="sys">
-      <AuthType>none</AuthType>
-      <ObjectId>4</ObjectId>
-    </role>
-    <role id="5575" parent="5513" name="db_owner">
-      <AuthType>none</AuthType>
-      <ObjectId>16384</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5576" parent="5513" name="db_accessadmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16385</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5577" parent="5513" name="db_securityadmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16386</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5578" parent="5513" name="db_ddladmin">
-      <AuthType>none</AuthType>
-      <ObjectId>16387</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5579" parent="5513" name="db_backupoperator">
-      <AuthType>none</AuthType>
-      <ObjectId>16389</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5580" parent="5513" name="db_datareader">
-      <AuthType>none</AuthType>
-      <ObjectId>16390</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5581" parent="5513" name="db_datawriter">
-      <AuthType>none</AuthType>
-      <ObjectId>16391</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5582" parent="5513" name="db_denydatareader">
-      <AuthType>none</AuthType>
-      <ObjectId>16392</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <role id="5583" parent="5513" name="db_denydatawriter">
-      <AuthType>none</AuthType>
-      <ObjectId>16393</ObjectId>
-      <Type>database-role</Type>
-      <OwnerId>1</OwnerId>
-    </role>
-    <schema id="5584" parent="5513" name="INFORMATION_SCHEMA">
-      <ObjectId>3</ObjectId>
-    </schema>
-    <schema id="5585" parent="5513" name="db_accessadmin">
-      <ObjectId>16385</ObjectId>
-    </schema>
-    <schema id="5586" parent="5513" name="db_backupoperator">
-      <ObjectId>16389</ObjectId>
-    </schema>
-    <schema id="5587" parent="5513" name="db_datareader">
-      <ObjectId>16390</ObjectId>
-    </schema>
-    <schema id="5588" parent="5513" name="db_datawriter">
-      <ObjectId>16391</ObjectId>
-    </schema>
-    <schema id="5589" parent="5513" name="db_ddladmin">
-      <ObjectId>16387</ObjectId>
-    </schema>
-    <schema id="5590" parent="5513" name="db_denydatareader">
-      <ObjectId>16392</ObjectId>
-    </schema>
-    <schema id="5591" parent="5513" name="db_denydatawriter">
-      <ObjectId>16393</ObjectId>
-    </schema>
-    <schema id="5592" parent="5513" name="db_owner">
-      <ObjectId>16384</ObjectId>
-    </schema>
-    <schema id="5593" parent="5513" name="db_securityadmin">
-      <ObjectId>16386</ObjectId>
-    </schema>
-    <schema id="5594" parent="5513" name="dbo">
-      <Current>1</Current>
-      <IntrospectionTimestamp>2025-03-08.21:01:23.483</IntrospectionTimestamp>
-      <LastIntrospectionLocalTimestamp>2025-03-08.14:01:23</LastIntrospectionLocalTimestamp>
-      <ObjectId>1</ObjectId>
-    </schema>
-    <schema id="5595" parent="5513" name="guest">
-      <ObjectId>2</ObjectId>
-    </schema>
-    <schema id="5596" parent="5513" name="sys">
-      <ObjectId>4</ObjectId>
-    </schema>
-    <table id="5597" parent="5565" name="MSreplication_options">
+    <routine id="5597" parent="5594" name="sp_MScleanupmergepublisher">
+      <CreatedTimestamp>2025-02-22.00:57:23.037</CreatedTimestamp>
+      <ModifiedTimestamp>2025-02-22.00:57:42.850</ModifiedTimestamp>
+      <ObjectId>2139154666</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>100</SourceTextLength>
+    </routine>
+    <routine id="5598" parent="5594" name="sp_MSrepl_startup">
+      <CreatedTimestamp>2025-02-22.00:57:23.030</CreatedTimestamp>
+      <ModifiedTimestamp>2025-02-22.00:57:42.847</ModifiedTimestamp>
+      <ObjectId>2123154609</ObjectId>
+      <RoutineType>proc</RoutineType>
+      <SourceTextLength>83</SourceTextLength>
+    </routine>
+    <table id="5599" parent="5594" name="MSreplication_options">
       <CreatedTimestamp>2025-02-22.00:57:23.010</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <ModifiedTimestamp>2025-02-22.00:57:42.843</ModifiedTimestamp>
@@ -16988,135 +17001,7 @@
       <LobDataSpaceId>0</LobDataSpaceId>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </table>
-    <table id="5598" parent="5565" name="additional">
-      <CreatedTimestamp>2025-03-07.13:52:59.880</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:05.947</ModifiedTimestamp>
-      <ObjectId>279672044</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5599" parent="5565" name="additional_product">
-      <CreatedTimestamp>2025-03-07.13:52:59.957</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:05.100</ModifiedTimestamp>
-      <ObjectId>311672158</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5600" parent="5565" name="calculation_unit">
-      <CreatedTimestamp>2025-03-07.13:53:00.073</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:06.463</ModifiedTimestamp>
-      <ObjectId>343672272</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5601" parent="5565" name="campus">
-      <CreatedTimestamp>2025-03-07.13:53:00.133</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:06.267</ModifiedTimestamp>
-      <ObjectId>375672386</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5602" parent="5565" name="category">
-      <CreatedTimestamp>2025-03-07.13:53:00.350</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:06.393</ModifiedTimestamp>
-      <ObjectId>407672500</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5603" parent="5565" name="department">
-      <CreatedTimestamp>2025-03-07.13:53:00.510</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:07.153</ModifiedTimestamp>
-      <ObjectId>439672614</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5604" parent="5565" name="groups">
-      <CreatedTimestamp>2025-03-07.13:53:00.623</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:05.243</ModifiedTimestamp>
-      <ObjectId>471672728</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5605" parent="5565" name="inventory">
-      <CreatedTimestamp>2025-03-07.13:53:00.737</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:05.480</ModifiedTimestamp>
-      <ObjectId>503672842</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5606" parent="5565" name="inventory_material">
-      <CreatedTimestamp>2025-03-07.13:53:00.840</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:05.480</ModifiedTimestamp>
-      <ObjectId>535672956</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5607" parent="5565" name="liquidate">
-      <CreatedTimestamp>2025-03-07.13:53:00.900</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:05.747</ModifiedTimestamp>
-      <ObjectId>567673070</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5608" parent="5565" name="liquidate_material">
-      <CreatedTimestamp>2025-03-07.13:53:00.980</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:05.817</ModifiedTimestamp>
-      <ObjectId>599673184</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5609" parent="5565" name="material">
-      <CreatedTimestamp>2025-03-07.13:53:01.117</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:06.820</ModifiedTimestamp>
-      <ObjectId>631673298</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5610" parent="5565" name="organization">
-      <CreatedTimestamp>2025-03-07.13:53:01.270</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:04.963</ModifiedTimestamp>
-      <ObjectId>663673412</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5611" parent="5565" name="place">
-      <CreatedTimestamp>2025-03-07.13:53:01.460</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:06.687</ModifiedTimestamp>
-      <ObjectId>695673526</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5612" parent="5565" name="product">
-      <CreatedTimestamp>2025-03-07.13:53:01.620</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:06.463</ModifiedTimestamp>
-      <ObjectId>727673640</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5613" parent="5565" name="roles">
-      <CreatedTimestamp>2025-03-07.13:53:01.807</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:07.037</ModifiedTimestamp>
-      <ObjectId>759673754</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5614" parent="5565" name="spt_fallback_db">
+    <table id="5600" parent="5594" name="spt_fallback_db">
       <CreatedTimestamp>2003-04-08.16:18:01.557</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <ModifiedTimestamp>2025-02-22.00:57:42.830</ModifiedTimestamp>
@@ -17125,7 +17010,7 @@
       <LobDataSpaceId>0</LobDataSpaceId>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </table>
-    <table id="5615" parent="5565" name="spt_fallback_dev">
+    <table id="5601" parent="5594" name="spt_fallback_dev">
       <CreatedTimestamp>2003-04-08.16:18:02.870</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <ModifiedTimestamp>2025-02-22.00:57:42.833</ModifiedTimestamp>
@@ -17134,7 +17019,7 @@
       <LobDataSpaceId>0</LobDataSpaceId>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </table>
-    <table id="5616" parent="5565" name="spt_fallback_usg">
+    <table id="5602" parent="5594" name="spt_fallback_usg">
       <CreatedTimestamp>2003-04-08.16:18:04.180</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <ModifiedTimestamp>2025-02-22.00:57:42.837</ModifiedTimestamp>
@@ -17143,7 +17028,7 @@
       <LobDataSpaceId>0</LobDataSpaceId>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </table>
-    <table id="5617" parent="5565" name="spt_monitor">
+    <table id="5603" parent="5594" name="spt_monitor">
       <CreatedTimestamp>2025-02-22.00:56:39.853</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <ModifiedTimestamp>2025-02-22.00:57:42.840</ModifiedTimestamp>
@@ -17152,3524 +17037,253 @@
       <LobDataSpaceId>0</LobDataSpaceId>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </table>
-    <table id="5618" parent="5565" name="transfer_material">
-      <CreatedTimestamp>2025-03-07.13:53:02.040</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:06.877</ModifiedTimestamp>
-      <ObjectId>791673868</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5619" parent="5565" name="type_place">
-      <CreatedTimestamp>2025-03-07.13:53:02.320</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:06.223</ModifiedTimestamp>
-      <ObjectId>823673982</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5620" parent="5565" name="user_role">
-      <CreatedTimestamp>2025-03-07.13:53:02.440</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:07.037</ModifiedTimestamp>
-      <ObjectId>855674096</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5621" parent="5565" name="users">
-      <CreatedTimestamp>2025-03-07.13:53:02.610</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:07.153</ModifiedTimestamp>
-      <ObjectId>887674210</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <view id="5622" parent="5565" name="spt_values">
+    <view id="5604" parent="5594" name="spt_values">
       <CreatedTimestamp>2025-02-22.00:56:39.830</CreatedTimestamp>
       <ModifiedTimestamp>2025-02-22.00:56:39.853</ModifiedTimestamp>
       <ObjectId>1787153412</ObjectId>
       <SourceTextLength>161</SourceTextLength>
     </view>
-    <routine id="5623" parent="5594" name="STATISTICAL_INVENTORY">
-      <CreatedTimestamp>2025-03-07.15:59:29.327</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.15:59:29.327</ModifiedTimestamp>
-      <ObjectId>386100416</ObjectId>
-      <RoutineType>proc</RoutineType>
-      <SourceTextLength>1555</SourceTextLength>
-    </routine>
-    <table id="5624" parent="5594" name="additional">
-      <CreatedTimestamp>2025-03-07.13:53:58.720</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.090</ModifiedTimestamp>
-      <ObjectId>885578193</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5625" parent="5594" name="additional_product">
-      <CreatedTimestamp>2025-03-07.13:53:58.723</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.047</ModifiedTimestamp>
-      <ObjectId>917578307</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5626" parent="5594" name="calculation_unit">
-      <CreatedTimestamp>2025-03-07.13:53:58.730</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.137</ModifiedTimestamp>
-      <ObjectId>949578421</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5627" parent="5594" name="campus">
-      <CreatedTimestamp>2025-03-07.13:53:58.737</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.120</ModifiedTimestamp>
-      <ObjectId>981578535</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5628" parent="5594" name="category">
-      <CreatedTimestamp>2025-03-07.13:53:58.743</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.140</ModifiedTimestamp>
-      <ObjectId>1013578649</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5629" parent="5594" name="department">
-      <CreatedTimestamp>2025-03-07.13:53:58.750</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.170</ModifiedTimestamp>
-      <ObjectId>1045578763</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5630" parent="5594" name="groups">
-      <CreatedTimestamp>2025-03-07.13:53:58.757</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.050</ModifiedTimestamp>
-      <ObjectId>1077578877</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5631" parent="5594" name="inventory">
-      <CreatedTimestamp>2025-03-07.13:53:58.760</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.057</ModifiedTimestamp>
-      <ObjectId>1109578991</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5632" parent="5594" name="inventory_material">
-      <CreatedTimestamp>2025-03-07.13:53:58.767</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.067</ModifiedTimestamp>
-      <ObjectId>1141579105</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5633" parent="5594" name="liquidate">
-      <CreatedTimestamp>2025-03-07.13:53:58.770</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.080</ModifiedTimestamp>
-      <ObjectId>1173579219</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5634" parent="5594" name="liquidate_material">
-      <CreatedTimestamp>2025-03-07.13:53:58.777</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.083</ModifiedTimestamp>
-      <ObjectId>1205579333</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5635" parent="5594" name="material">
-      <CreatedTimestamp>2025-03-07.13:53:58.780</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.143</ModifiedTimestamp>
-      <ObjectId>1237579447</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5636" parent="5594" name="organization">
-      <CreatedTimestamp>2025-03-07.13:53:58.790</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.033</ModifiedTimestamp>
-      <ObjectId>1269579561</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5637" parent="5594" name="place">
-      <CreatedTimestamp>2025-03-07.13:53:58.797</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.153</ModifiedTimestamp>
-      <ObjectId>1301579675</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5638" parent="5594" name="product">
-      <CreatedTimestamp>2025-03-07.13:53:58.803</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.140</ModifiedTimestamp>
-      <ObjectId>1333579789</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5639" parent="5594" name="roles">
-      <CreatedTimestamp>2025-03-07.13:53:58.813</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.163</ModifiedTimestamp>
-      <ObjectId>1365579903</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5640" parent="5594" name="transfer_material">
-      <CreatedTimestamp>2025-03-07.13:53:58.820</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.160</ModifiedTimestamp>
-      <ObjectId>1397580017</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5641" parent="5594" name="type_place">
-      <CreatedTimestamp>2025-03-07.13:53:58.827</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.130</ModifiedTimestamp>
-      <ObjectId>1429580131</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <table id="5642" parent="5594" name="user_role">
-      <CreatedTimestamp>2025-03-07.13:53:58.830</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.167</ModifiedTimestamp>
-      <ObjectId>1461580245</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>0</LobDataSpaceId>
-    </table>
-    <table id="5643" parent="5594" name="users">
-      <CreatedTimestamp>2025-03-07.13:53:58.840</CreatedTimestamp>
-      <DataRetentionPeriod>-1</DataRetentionPeriod>
-      <ModifiedTimestamp>2025-03-07.13:53:59.170</ModifiedTimestamp>
-      <ObjectId>1493580359</ObjectId>
-      <LedgerViewId>0</LedgerViewId>
-      <LobDataSpaceId>1</LobDataSpaceId>
-    </table>
-    <column id="5644" parent="5597" name="optname">
+    <column id="5605" parent="5599" name="optname">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>sysname|0s</StoredType>
     </column>
-    <column id="5645" parent="5597" name="value">
+    <column id="5606" parent="5599" name="value">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>bit|0s</StoredType>
     </column>
-    <column id="5646" parent="5597" name="major_version">
+    <column id="5607" parent="5599" name="major_version">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5647" parent="5597" name="minor_version">
+    <column id="5608" parent="5599" name="minor_version">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5648" parent="5597" name="revision">
+    <column id="5609" parent="5599" name="revision">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5649" parent="5597" name="install_failures">
+    <column id="5610" parent="5599" name="install_failures">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5650" parent="5598" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(2)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5651" parent="5598" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5652" parent="5598" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5653" parent="5598" name="in_process">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>bit|0s</StoredType>
-    </column>
-    <column id="5654" parent="5598" name="time">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5655" parent="5598" name="organization_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5656" parent="5598" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5657" parent="5598" name="FKt1alv9hpj5ani25xa533pfmja">
-      <ColNames>organization_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:04.960</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.960</ModifiedTimestamp>
-      <ObjectId>1319675749</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>663673412</RefTableId>
-      <RefTableName>organization</RefTableName>
-    </foreign-key>
-    <foreign-key id="5658" parent="5598" name="FKet3kdibyco51douuuferdc9gg">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:04.843</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.843</ModifiedTimestamp>
-      <ObjectId>1303675692</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>887674210</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <index id="5659" parent="5598" name="PK__addition__3213E83F126A0E91">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5660" parent="5598" name="UK_7vgpb8innntdwagneb75lujnh">
-      <ColNames>time</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5661" parent="5598" name="PK__addition__3213E83F126A0E91">
-      <CreatedTimestamp>2025-03-07.13:52:59.880</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:52:59.880</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>295672101</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__addition__3213E83F126A0E91</UnderlyingIndexName>
-    </key>
-    <key id="5662" parent="5598" name="UK_7vgpb8innntdwagneb75lujnh">
-      <CreatedTimestamp>2025-03-07.13:53:03.310</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.310</ModifiedTimestamp>
-      <ObjectId>919674324</ObjectId>
-      <UnderlyingIndexName>UK_7vgpb8innntdwagneb75lujnh</UnderlyingIndexName>
-    </key>
-    <column id="5663" parent="5599" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(4)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5664" parent="5599" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5665" parent="5599" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5666" parent="5599" name="price">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>float|0s</StoredType>
-    </column>
-    <column id="5667" parent="5599" name="additional_id">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5668" parent="5599" name="product_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5669" parent="5599" name="FKnp0b6fmawn2abu44pk4a626qq">
-      <ColNames>additional_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.100</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.100</ModifiedTimestamp>
-      <ObjectId>1351675863</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>279672044</RefTableId>
-      <RefTableName>additional</RefTableName>
-    </foreign-key>
-    <foreign-key id="5670" parent="5599" name="FK4bp7wkl65eg475u7p0ntomr45">
-      <ColNames>product_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.023</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.023</ModifiedTimestamp>
-      <ObjectId>1335675806</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>727673640</RefTableId>
-      <RefTableName>product</RefTableName>
-    </foreign-key>
-    <index id="5671" parent="5599" name="PK__addition__3213E83FD9DB9B0C">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5672" parent="5599" name="UK7tv0fqkh2nmtdnes1p3o1j4f9">
-      <ColNames>additional_id
-product_id</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5673" parent="5599" name="PK__addition__3213E83FD9DB9B0C">
-      <CreatedTimestamp>2025-03-07.13:52:59.960</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:52:59.960</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>327672215</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__addition__3213E83FD9DB9B0C</UnderlyingIndexName>
-    </key>
-    <key id="5674" parent="5599" name="UK7tv0fqkh2nmtdnes1p3o1j4f9">
-      <CreatedTimestamp>2025-03-07.13:53:03.350</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.350</ModifiedTimestamp>
-      <ObjectId>935674381</ObjectId>
-      <UnderlyingIndexName>UK7tv0fqkh2nmtdnes1p3o1j4f9</UnderlyingIndexName>
-    </key>
-    <column id="5675" parent="5600" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(2)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5676" parent="5600" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5677" parent="5600" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5678" parent="5600" name="description">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5679" parent="5600" name="name">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(10 char)|0s</StoredType>
-    </column>
-    <index id="5680" parent="5600" name="PK__calculat__3213E83F25ECBC44">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5681" parent="5600" name="UK_tii3g7wc6gwdxyoqg9iixky7u">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5682" parent="5600" name="PK__calculat__3213E83F25ECBC44">
-      <CreatedTimestamp>2025-03-07.13:53:00.073</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:00.073</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>359672329</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__calculat__3213E83F25ECBC44</UnderlyingIndexName>
-    </key>
-    <key id="5683" parent="5600" name="UK_tii3g7wc6gwdxyoqg9iixky7u">
-      <CreatedTimestamp>2025-03-07.13:53:03.453</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.453</ModifiedTimestamp>
-      <ObjectId>951674438</ObjectId>
-      <UnderlyingIndexName>UK_tii3g7wc6gwdxyoqg9iixky7u</UnderlyingIndexName>
-    </key>
-    <column id="5684" parent="5601" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(2)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5685" parent="5601" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5686" parent="5601" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5687" parent="5601" name="campus_type">
-      <Position>4</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <column id="5688" parent="5601" name="contact_email">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(50 char)|0s</StoredType>
-    </column>
-    <column id="5689" parent="5601" name="contact_phone">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>varchar(15 char)|0s</StoredType>
-    </column>
-    <column id="5690" parent="5601" name="description">
-      <Position>7</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5691" parent="5601" name="location">
-      <Position>8</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5692" parent="5601" name="map_url">
-      <Position>9</Position>
-      <StoredType>varchar(5000 char)|0s</StoredType>
-    </column>
-    <column id="5693" parent="5601" name="name">
-      <NotNull>1</NotNull>
-      <Position>10</Position>
-      <StoredType>varchar(15 char)|0s</StoredType>
-    </column>
-    <index id="5694" parent="5601" name="PK__campus__3213E83F5EF84508">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5695" parent="5601" name="UK_81rhu9trr93hw9082igcywgl8">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5696" parent="5601" name="UK_gnw9rha5q0xuasc6u00s7r5jg">
-      <ColNames>contact_email</ColNames>
-      <Position>3</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5697" parent="5601" name="UK_r5arl3wxy9dkgpwwlcgfwhv4r">
-      <ColNames>contact_phone</ColNames>
-      <Position>4</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5698" parent="5601" name="PK__campus__3213E83F5EF84508">
-      <CreatedTimestamp>2025-03-07.13:53:00.137</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:00.137</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>391672443</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__campus__3213E83F5EF84508</UnderlyingIndexName>
-    </key>
-    <key id="5699" parent="5601" name="UK_gnw9rha5q0xuasc6u00s7r5jg">
-      <CreatedTimestamp>2025-03-07.13:53:03.540</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.540</ModifiedTimestamp>
-      <ObjectId>983674552</ObjectId>
-      <UnderlyingIndexName>UK_gnw9rha5q0xuasc6u00s7r5jg</UnderlyingIndexName>
-    </key>
-    <key id="5700" parent="5601" name="UK_r5arl3wxy9dkgpwwlcgfwhv4r">
-      <CreatedTimestamp>2025-03-07.13:53:03.583</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.583</ModifiedTimestamp>
-      <ObjectId>999674609</ObjectId>
-      <UnderlyingIndexName>UK_r5arl3wxy9dkgpwwlcgfwhv4r</UnderlyingIndexName>
-    </key>
-    <key id="5701" parent="5601" name="UK_81rhu9trr93hw9082igcywgl8">
-      <CreatedTimestamp>2025-03-07.13:53:03.493</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.493</ModifiedTimestamp>
-      <ObjectId>967674495</ObjectId>
-      <UnderlyingIndexName>UK_81rhu9trr93hw9082igcywgl8</UnderlyingIndexName>
-    </key>
-    <column id="5702" parent="5602" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(17)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5703" parent="5602" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5704" parent="5602" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5705" parent="5602" name="description">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5706" parent="5602" name="name">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(50 char)|0s</StoredType>
-    </column>
-    <column id="5707" parent="5602" name="group_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5708" parent="5602" name="FKiieibfvwo09cle4lxta1ltqek">
-      <ColNames>group_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.243</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.243</ModifiedTimestamp>
-      <ObjectId>1367675920</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>471672728</RefTableId>
-      <RefTableName>groups</RefTableName>
-    </foreign-key>
-    <index id="5709" parent="5602" name="PK__category__3213E83FFED8D5EB">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5710" parent="5602" name="UK_46ccwnsi9409t36lurvtyljak">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5711" parent="5602" name="PK__category__3213E83FFED8D5EB">
-      <CreatedTimestamp>2025-03-07.13:53:00.350</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:00.350</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>423672557</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__category__3213E83FFED8D5EB</UnderlyingIndexName>
-    </key>
-    <key id="5712" parent="5602" name="UK_46ccwnsi9409t36lurvtyljak">
-      <CreatedTimestamp>2025-03-07.13:53:03.633</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.633</ModifiedTimestamp>
-      <ObjectId>1015674666</ObjectId>
-      <UnderlyingIndexName>UK_46ccwnsi9409t36lurvtyljak</UnderlyingIndexName>
-    </key>
-    <column id="5713" parent="5603" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(2)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5714" parent="5603" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5715" parent="5603" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5716" parent="5603" name="description">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5717" parent="5603" name="name">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(30 char)|0s</StoredType>
-    </column>
-    <index id="5718" parent="5603" name="PK__departme__3213E83F1DFBFA6C">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5719" parent="5603" name="UK_1t68827l97cwyxo9r1u6t4p7d">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5720" parent="5603" name="PK__departme__3213E83F1DFBFA6C">
-      <CreatedTimestamp>2025-03-07.13:53:00.510</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:00.510</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>455672671</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__departme__3213E83F1DFBFA6C</UnderlyingIndexName>
-    </key>
-    <key id="5721" parent="5603" name="UK_1t68827l97cwyxo9r1u6t4p7d">
-      <CreatedTimestamp>2025-03-07.13:53:03.680</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.680</ModifiedTimestamp>
-      <ObjectId>1031674723</ObjectId>
-      <UnderlyingIndexName>UK_1t68827l97cwyxo9r1u6t4p7d</UnderlyingIndexName>
-    </key>
-    <column id="5722" parent="5604" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(7)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5723" parent="5604" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5724" parent="5604" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5725" parent="5604" name="code">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>varchar(50 char)|0s</StoredType>
-    </column>
-    <column id="5726" parent="5604" name="description">
-      <Position>5</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <index id="5727" parent="5604" name="PK__groups__3213E83F6190BA22">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5728" parent="5604" name="UK_16fame6je5oyjncqmbl1n5177">
-      <ColNames>code</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5729" parent="5604" name="PK__groups__3213E83F6190BA22">
-      <CreatedTimestamp>2025-03-07.13:53:00.623</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:00.623</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>487672785</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__groups__3213E83F6190BA22</UnderlyingIndexName>
-    </key>
-    <key id="5730" parent="5604" name="UK_16fame6je5oyjncqmbl1n5177">
-      <CreatedTimestamp>2025-03-07.13:53:03.730</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.730</ModifiedTimestamp>
-      <ObjectId>1047674780</ObjectId>
-      <UnderlyingIndexName>UK_16fame6je5oyjncqmbl1n5177</UnderlyingIndexName>
-    </key>
-    <column id="5731" parent="5605" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(2)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5732" parent="5605" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5733" parent="5605" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5734" parent="5605" name="end_time">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5735" parent="5605" name="in_check">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>bit|0s</StoredType>
-    </column>
-    <column id="5736" parent="5605" name="start_time">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5737" parent="5605" name="time">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <index id="5738" parent="5605" name="PK__inventor__3213E83F2C9FE476">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5739" parent="5605" name="UK_hovujyb0ylc9yfgdvixtvh0w1">
-      <ColNames>time</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5740" parent="5605" name="PK__inventor__3213E83F2C9FE476">
-      <CreatedTimestamp>2025-03-07.13:53:00.737</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:00.737</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>519672899</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__inventor__3213E83F2C9FE476</UnderlyingIndexName>
-    </key>
-    <key id="5741" parent="5605" name="UK_hovujyb0ylc9yfgdvixtvh0w1">
-      <CreatedTimestamp>2025-03-07.13:53:03.770</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.770</ModifiedTimestamp>
-      <ObjectId>1063674837</ObjectId>
-      <UnderlyingIndexName>UK_hovujyb0ylc9yfgdvixtvh0w1</UnderlyingIndexName>
-    </key>
-    <column id="5742" parent="5606" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(3)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5743" parent="5606" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5744" parent="5606" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5745" parent="5606" name="inventory_id">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5746" parent="5606" name="material_id">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5747" parent="5606" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5748" parent="5606" name="FKmhql0ttsmec7mhdq1t3m62yyw">
-      <ColNames>inventory_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.480</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.480</ModifiedTimestamp>
-      <ObjectId>1415676091</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>503672842</RefTableId>
-      <RefTableName>inventory</RefTableName>
-    </foreign-key>
-    <foreign-key id="5749" parent="5606" name="FK5qsj30m3psgl1hoalnkcwx82t">
-      <ColNames>material_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.363</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.363</ModifiedTimestamp>
-      <ObjectId>1383675977</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>631673298</RefTableId>
-      <RefTableName>material</RefTableName>
-    </foreign-key>
-    <foreign-key id="5750" parent="5606" name="FK9pa2m6hc8dvdyitrksx2is76j">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.423</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.423</ModifiedTimestamp>
-      <ObjectId>1399676034</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>887674210</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <index id="5751" parent="5606" name="PK__inventor__3213E83FE7F9A452">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5752" parent="5606" name="UKkr0vov4p3xvaelxl1sq5kawyr">
-      <ColNames>inventory_id
-material_id</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5753" parent="5606" name="UKtg4ph0weovkcle71ddb08bbav">
-      <ColNames>inventory_id
-material_id
-user_id</ColNames>
-      <Position>3</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5754" parent="5606" name="PK__inventor__3213E83FE7F9A452">
-      <CreatedTimestamp>2025-03-07.13:53:00.840</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:00.840</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>551673013</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__inventor__3213E83FE7F9A452</UnderlyingIndexName>
-    </key>
-    <key id="5755" parent="5606" name="UKtg4ph0weovkcle71ddb08bbav">
-      <CreatedTimestamp>2025-03-07.13:53:03.910</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.910</ModifiedTimestamp>
-      <ObjectId>1095674951</ObjectId>
-      <UnderlyingIndexName>UKtg4ph0weovkcle71ddb08bbav</UnderlyingIndexName>
-    </key>
-    <key id="5756" parent="5606" name="UKkr0vov4p3xvaelxl1sq5kawyr">
-      <CreatedTimestamp>2025-03-07.13:53:03.850</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.850</ModifiedTimestamp>
-      <ObjectId>1079674894</ObjectId>
-      <UnderlyingIndexName>UKkr0vov4p3xvaelxl1sq5kawyr</UnderlyingIndexName>
-    </key>
-    <column id="5757" parent="5607" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(2)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5758" parent="5607" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5759" parent="5607" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5760" parent="5607" name="done">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>bit|0s</StoredType>
-    </column>
-    <column id="5761" parent="5607" name="time">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5762" parent="5607" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5763" parent="5607" name="FK4ahjfmci7ip34afirwk8wjnwd">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.620</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.620</ModifiedTimestamp>
-      <ObjectId>1431676148</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>887674210</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <index id="5764" parent="5607" name="PK__liquidat__3213E83FA9A47546">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5765" parent="5607" name="UK_b1altweymi6kymfbhtalunru9">
-      <ColNames>time</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5766" parent="5607" name="PK__liquidat__3213E83FA9A47546">
-      <CreatedTimestamp>2025-03-07.13:53:00.903</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:00.903</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>583673127</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__liquidat__3213E83FA9A47546</UnderlyingIndexName>
-    </key>
-    <key id="5767" parent="5607" name="UK_b1altweymi6kymfbhtalunru9">
-      <CreatedTimestamp>2025-03-07.13:53:03.957</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.957</ModifiedTimestamp>
-      <ObjectId>1111675008</ObjectId>
-      <UnderlyingIndexName>UK_b1altweymi6kymfbhtalunru9</UnderlyingIndexName>
-    </key>
-    <column id="5768" parent="5608" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(2)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5769" parent="5608" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5770" parent="5608" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5771" parent="5608" name="liquidate_id">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5772" parent="5608" name="material_id">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5773" parent="5608" name="FKmhpyesj1t2d35xmhjc4td2ux2">
-      <ColNames>liquidate_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.743</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.743</ModifiedTimestamp>
-      <ObjectId>1447676205</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>567673070</RefTableId>
-      <RefTableName>liquidate</RefTableName>
-    </foreign-key>
-    <foreign-key id="5774" parent="5608" name="FKplvgspnupoetiy5i2a0lyn93q">
-      <ColNames>material_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.817</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.817</ModifiedTimestamp>
-      <ObjectId>1463676262</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>631673298</RefTableId>
-      <RefTableName>material</RefTableName>
-    </foreign-key>
-    <index id="5775" parent="5608" name="PK__liquidat__3213E83F4E58D70A">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5776" parent="5608" name="UK_o62onyfih7oakg9iuqf1uur85">
-      <ColNames>material_id</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5777" parent="5608" name="UKej6nr1ediw6l886bew5h7nago">
-      <ColNames>liquidate_id
-material_id</ColNames>
-      <Position>3</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5778" parent="5608" name="PK__liquidat__3213E83F4E58D70A">
-      <CreatedTimestamp>2025-03-07.13:53:00.980</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:00.980</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>615673241</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__liquidat__3213E83F4E58D70A</UnderlyingIndexName>
-    </key>
-    <key id="5779" parent="5608" name="UKej6nr1ediw6l886bew5h7nago">
-      <CreatedTimestamp>2025-03-07.13:53:04.020</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.020</ModifiedTimestamp>
-      <ObjectId>1143675122</ObjectId>
-      <UnderlyingIndexName>UKej6nr1ediw6l886bew5h7nago</UnderlyingIndexName>
-    </key>
-    <key id="5780" parent="5608" name="UK_o62onyfih7oakg9iuqf1uur85">
-      <CreatedTimestamp>2025-03-07.13:53:03.983</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:03.983</ModifiedTimestamp>
-      <ObjectId>1127675065</ObjectId>
-      <UnderlyingIndexName>UK_o62onyfih7oakg9iuqf1uur85</UnderlyingIndexName>
-    </key>
-    <column id="5781" parent="5609" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(8)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5782" parent="5609" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5783" parent="5609" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5784" parent="5609" name="credential_code">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>varchar(100 char)|0s</StoredType>
-    </column>
-    <column id="5785" parent="5609" name="is_have_include">
-      <Position>5</Position>
-      <StoredType>bit|0s</StoredType>
-    </column>
-    <column id="5786" parent="5609" name="parent_code">
-      <Position>6</Position>
-      <StoredType>varchar(100 char)|0s</StoredType>
-    </column>
-    <column id="5787" parent="5609" name="status">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <column id="5788" parent="5609" name="time_start_depreciation">
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5789" parent="5609" name="additional_id">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5790" parent="5609" name="current_place_id">
-      <Position>10</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5791" parent="5609" name="product_id">
-      <NotNull>1</NotNull>
-      <Position>11</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5792" parent="5609" name="user_id">
-      <Position>12</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5793" parent="5609" name="FKausejg8uiebrhdat6ak37jagk">
-      <ColNames>additional_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.947</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.947</ModifiedTimestamp>
-      <ObjectId>1495676376</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>279672044</RefTableId>
-      <RefTableName>additional</RefTableName>
-    </foreign-key>
-    <foreign-key id="5794" parent="5609" name="FKge9hhe8jxcmkynun8igiypa75">
-      <ColNames>current_place_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.043</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.043</ModifiedTimestamp>
-      <ObjectId>1511676433</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>695673526</RefTableId>
-      <RefTableName>place</RefTableName>
-    </foreign-key>
-    <foreign-key id="5795" parent="5609" name="FKmkxedk79wsqc47bm4hm0c4jfw">
-      <ColNames>product_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.080</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.080</ModifiedTimestamp>
-      <ObjectId>1527676490</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>727673640</RefTableId>
-      <RefTableName>product</RefTableName>
-    </foreign-key>
-    <foreign-key id="5796" parent="5609" name="FK6ps0e9pqttae1ygohma94q2r5">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:05.887</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:05.887</ModifiedTimestamp>
-      <ObjectId>1479676319</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>887674210</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <index id="5797" parent="5609" name="PK__material__3213E83FC01CDFEF">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5798" parent="5609" name="UK_2en3vw9sqw80gnwnghthv3cs2">
-      <ColNames>credential_code</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5799" parent="5609" name="PK__material__3213E83FC01CDFEF">
-      <CreatedTimestamp>2025-03-07.13:53:01.120</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:01.120</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>647673355</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__material__3213E83FC01CDFEF</UnderlyingIndexName>
-    </key>
-    <key id="5800" parent="5609" name="UK_2en3vw9sqw80gnwnghthv3cs2">
-      <CreatedTimestamp>2025-03-07.13:53:04.110</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.110</ModifiedTimestamp>
-      <ObjectId>1159675179</ObjectId>
-      <UnderlyingIndexName>UK_2en3vw9sqw80gnwnghthv3cs2</UnderlyingIndexName>
-    </key>
-    <column id="5801" parent="5610" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(3)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5802" parent="5610" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5803" parent="5610" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5804" parent="5610" name="contact">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5805" parent="5610" name="name">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(15 char)|0s</StoredType>
-    </column>
-    <index id="5806" parent="5610" name="PK__organiza__3213E83F7C3C7975">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5807" parent="5610" name="UK_8j5y8ipk73yx2joy9yr653c9t">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5808" parent="5610" name="PK__organiza__3213E83F7C3C7975">
-      <CreatedTimestamp>2025-03-07.13:53:01.270</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:01.270</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>679673469</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__organiza__3213E83F7C3C7975</UnderlyingIndexName>
-    </key>
-    <key id="5809" parent="5610" name="UK_8j5y8ipk73yx2joy9yr653c9t">
-      <CreatedTimestamp>2025-03-07.13:53:04.220</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.220</ModifiedTimestamp>
-      <ObjectId>1175675236</ObjectId>
-      <UnderlyingIndexName>UK_8j5y8ipk73yx2joy9yr653c9t</UnderlyingIndexName>
-    </key>
-    <column id="5810" parent="5611" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(3)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5811" parent="5611" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5812" parent="5611" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5813" parent="5611" name="code">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>varchar(20 char)|0s</StoredType>
-    </column>
-    <column id="5814" parent="5611" name="description">
-      <Position>5</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5815" parent="5611" name="direction">
-      <Position>6</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5816" parent="5611" name="floor">
-      <Position>7</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="5817" parent="5611" name="name_specification">
-      <Position>8</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5818" parent="5611" name="campus_id">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5819" parent="5611" name="department_id">
-      <Position>10</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5820" parent="5611" name="type_place_id">
-      <NotNull>1</NotNull>
-      <Position>11</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5821" parent="5611" name="FKtnvala5eibf0cv7fbad0i3a3h">
-      <ColNames>campus_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.267</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.267</ModifiedTimestamp>
-      <ObjectId>1575676661</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>375672386</RefTableId>
-      <RefTableName>campus</RefTableName>
-    </foreign-key>
-    <foreign-key id="5822" parent="5611" name="FKqyvyl0141jaamwxromhrv9iu0">
-      <ColNames>department_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.160</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.160</ModifiedTimestamp>
-      <ObjectId>1543676547</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>439672614</RefTableId>
-      <RefTableName>department</RefTableName>
-    </foreign-key>
-    <foreign-key id="5823" parent="5611" name="FKs9jxnngmo9yrdkepl784c9v30">
-      <ColNames>type_place_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.223</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.223</ModifiedTimestamp>
-      <ObjectId>1559676604</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>823673982</RefTableId>
-      <RefTableName>type_place</RefTableName>
-    </foreign-key>
-    <index id="5824" parent="5611" name="PK__place__3213E83F6A42DCBD">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5825" parent="5611" name="UK_r186fpmygnarrcd201o1vxe8j">
-      <ColNames>code</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5826" parent="5611" name="PK__place__3213E83F6A42DCBD">
-      <CreatedTimestamp>2025-03-07.13:53:01.460</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:01.460</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>711673583</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__place__3213E83F6A42DCBD</UnderlyingIndexName>
-    </key>
-    <key id="5827" parent="5611" name="UK_r186fpmygnarrcd201o1vxe8j">
-      <CreatedTimestamp>2025-03-07.13:53:04.297</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.297</ModifiedTimestamp>
-      <ObjectId>1191675293</ObjectId>
-      <UnderlyingIndexName>UK_r186fpmygnarrcd201o1vxe8j</UnderlyingIndexName>
-    </key>
-    <column id="5828" parent="5612" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(4)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5829" parent="5612" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5830" parent="5612" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5831" parent="5612" name="allocation_duration">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="5832" parent="5612" name="depreciation_rate">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>float|0s</StoredType>
-    </column>
-    <column id="5833" parent="5612" name="description">
-      <Position>6</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5834" parent="5612" name="name">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>varchar(200 char)|0s</StoredType>
-    </column>
-    <column id="5835" parent="5612" name="origin">
-      <Position>8</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5836" parent="5612" name="time_allocation_type">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <column id="5837" parent="5612" name="type">
-      <NotNull>1</NotNull>
-      <Position>10</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <column id="5838" parent="5612" name="calculation_unit">
-      <NotNull>1</NotNull>
-      <Position>11</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5839" parent="5612" name="category_id">
-      <NotNull>1</NotNull>
-      <Position>12</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5840" parent="5612" name="FKk34cppr38wshuikl72d8mnvqh">
-      <ColNames>calculation_unit</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.463</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.463</ModifiedTimestamp>
-      <ObjectId>1607676775</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>343672272</RefTableId>
-      <RefTableName>calculation_unit</RefTableName>
-    </foreign-key>
-    <foreign-key id="5841" parent="5612" name="FK1mtsbur82frn64de7balymq9s">
-      <ColNames>category_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.393</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.393</ModifiedTimestamp>
-      <ObjectId>1591676718</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>407672500</RefTableId>
-      <RefTableName>category</RefTableName>
-    </foreign-key>
-    <index id="5842" parent="5612" name="PK__product__3213E83F5CAB51BB">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5843" parent="5612" name="UK_jmivyxk9rmgysrmsqw15lqr5b">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5844" parent="5612" name="PK__product__3213E83F5CAB51BB">
-      <CreatedTimestamp>2025-03-07.13:53:01.637</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:01.637</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>743673697</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__product__3213E83F5CAB51BB</UnderlyingIndexName>
-    </key>
-    <key id="5845" parent="5612" name="UK_jmivyxk9rmgysrmsqw15lqr5b">
-      <CreatedTimestamp>2025-03-07.13:53:04.407</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.407</ModifiedTimestamp>
-      <ObjectId>1207675350</ObjectId>
-      <UnderlyingIndexName>UK_jmivyxk9rmgysrmsqw15lqr5b</UnderlyingIndexName>
-    </key>
-    <column id="5846" parent="5613" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(5)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5847" parent="5613" name="role_name">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <index id="5848" parent="5613" name="PK__roles__3213E83FCE498633">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5849" parent="5613" name="UK_716hgxp60ym1lifrdgp67xt5k">
-      <ColNames>role_name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5850" parent="5613" name="PK__roles__3213E83FCE498633">
-      <CreatedTimestamp>2025-03-07.13:53:01.823</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:01.823</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>775673811</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__roles__3213E83FCE498633</UnderlyingIndexName>
-    </key>
-    <key id="5851" parent="5613" name="UK_716hgxp60ym1lifrdgp67xt5k">
-      <CreatedTimestamp>2025-03-07.13:53:04.470</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.470</ModifiedTimestamp>
-      <ObjectId>1223675407</ObjectId>
-      <UnderlyingIndexName>UK_716hgxp60ym1lifrdgp67xt5k</UnderlyingIndexName>
-    </key>
-    <column id="5852" parent="5614" name="xserver_name">
+    <column id="5611" parent="5600" name="xserver_name">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>varchar(30 char)|0s</StoredType>
     </column>
-    <column id="5853" parent="5614" name="xdttm_ins">
+    <column id="5612" parent="5600" name="xdttm_ins">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5854" parent="5614" name="xdttm_last_ins_upd">
+    <column id="5613" parent="5600" name="xdttm_last_ins_upd">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5855" parent="5614" name="xfallback_dbid">
+    <column id="5614" parent="5600" name="xfallback_dbid">
       <Position>4</Position>
       <StoredType>smallint|0s</StoredType>
     </column>
-    <column id="5856" parent="5614" name="name">
+    <column id="5615" parent="5600" name="name">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>varchar(30 char)|0s</StoredType>
     </column>
-    <column id="5857" parent="5614" name="dbid">
+    <column id="5616" parent="5600" name="dbid">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>smallint|0s</StoredType>
     </column>
-    <column id="5858" parent="5614" name="status">
+    <column id="5617" parent="5600" name="status">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>smallint|0s</StoredType>
     </column>
-    <column id="5859" parent="5614" name="version">
+    <column id="5618" parent="5600" name="version">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>smallint|0s</StoredType>
     </column>
-    <column id="5860" parent="5615" name="xserver_name">
+    <column id="5619" parent="5601" name="xserver_name">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>varchar(30 char)|0s</StoredType>
     </column>
-    <column id="5861" parent="5615" name="xdttm_ins">
+    <column id="5620" parent="5601" name="xdttm_ins">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5862" parent="5615" name="xdttm_last_ins_upd">
+    <column id="5621" parent="5601" name="xdttm_last_ins_upd">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5863" parent="5615" name="xfallback_low">
+    <column id="5622" parent="5601" name="xfallback_low">
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5864" parent="5615" name="xfallback_drive">
+    <column id="5623" parent="5601" name="xfallback_drive">
       <Position>5</Position>
       <StoredType>char(2 char)|0s</StoredType>
     </column>
-    <column id="5865" parent="5615" name="low">
+    <column id="5624" parent="5601" name="low">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5866" parent="5615" name="high">
+    <column id="5625" parent="5601" name="high">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5867" parent="5615" name="status">
+    <column id="5626" parent="5601" name="status">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>smallint|0s</StoredType>
     </column>
-    <column id="5868" parent="5615" name="name">
+    <column id="5627" parent="5601" name="name">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>varchar(30 char)|0s</StoredType>
     </column>
-    <column id="5869" parent="5615" name="phyname">
+    <column id="5628" parent="5601" name="phyname">
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StoredType>varchar(127 char)|0s</StoredType>
     </column>
-    <column id="5870" parent="5616" name="xserver_name">
+    <column id="5629" parent="5602" name="xserver_name">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>varchar(30 char)|0s</StoredType>
     </column>
-    <column id="5871" parent="5616" name="xdttm_ins">
+    <column id="5630" parent="5602" name="xdttm_ins">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5872" parent="5616" name="xdttm_last_ins_upd">
+    <column id="5631" parent="5602" name="xdttm_last_ins_upd">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5873" parent="5616" name="xfallback_vstart">
+    <column id="5632" parent="5602" name="xfallback_vstart">
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5874" parent="5616" name="dbid">
+    <column id="5633" parent="5602" name="dbid">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>smallint|0s</StoredType>
     </column>
-    <column id="5875" parent="5616" name="segmap">
+    <column id="5634" parent="5602" name="segmap">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5876" parent="5616" name="lstart">
+    <column id="5635" parent="5602" name="lstart">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5877" parent="5616" name="sizepg">
+    <column id="5636" parent="5602" name="sizepg">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5878" parent="5616" name="vstart">
+    <column id="5637" parent="5602" name="vstart">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5879" parent="5617" name="lastrun">
+    <column id="5638" parent="5603" name="lastrun">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="5880" parent="5617" name="cpu_busy">
+    <column id="5639" parent="5603" name="cpu_busy">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5881" parent="5617" name="io_busy">
+    <column id="5640" parent="5603" name="io_busy">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5882" parent="5617" name="idle">
+    <column id="5641" parent="5603" name="idle">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5883" parent="5617" name="pack_received">
+    <column id="5642" parent="5603" name="pack_received">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5884" parent="5617" name="pack_sent">
+    <column id="5643" parent="5603" name="pack_sent">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5885" parent="5617" name="connections">
+    <column id="5644" parent="5603" name="connections">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5886" parent="5617" name="pack_errors">
+    <column id="5645" parent="5603" name="pack_errors">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5887" parent="5617" name="total_read">
+    <column id="5646" parent="5603" name="total_read">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5888" parent="5617" name="total_write">
+    <column id="5647" parent="5603" name="total_write">
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5889" parent="5617" name="total_errors">
+    <column id="5648" parent="5603" name="total_errors">
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5890" parent="5618" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(3)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5891" parent="5618" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5892" parent="5618" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5893" parent="5618" name="reason">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5894" parent="5618" name="time">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5895" parent="5618" name="material_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5896" parent="5618" name="place_from_id">
-      <Position>7</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5897" parent="5618" name="place_target_id">
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5898" parent="5618" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5899" parent="5618" name="FKr9taxmn4yd35kssgo9h8hjyo6">
-      <ColNames>material_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.820</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.820</ModifiedTimestamp>
-      <ObjectId>1655676946</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>631673298</RefTableId>
-      <RefTableName>material</RefTableName>
-    </foreign-key>
-    <foreign-key id="5900" parent="5618" name="FKh6k82y3uusggkjrdjyooeh5ap">
-      <ColNames>place_from_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.687</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.687</ModifiedTimestamp>
-      <ObjectId>1639676889</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>695673526</RefTableId>
-      <RefTableName>place</RefTableName>
-    </foreign-key>
-    <foreign-key id="5901" parent="5618" name="FK4tqflfcldfpk2e6ly75loggi7">
-      <ColNames>place_target_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.540</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.540</ModifiedTimestamp>
-      <ObjectId>1623676832</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>695673526</RefTableId>
-      <RefTableName>place</RefTableName>
-    </foreign-key>
-    <foreign-key id="5902" parent="5618" name="FKs4oor2bkpderr1fnrejryox0w">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.877</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.877</ModifiedTimestamp>
-      <ObjectId>1671677003</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>887674210</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <index id="5903" parent="5618" name="PK__transfer__3213E83FE2240D34">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5904" parent="5618" name="PK__transfer__3213E83FE2240D34">
-      <CreatedTimestamp>2025-03-07.13:53:02.043</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:02.043</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>807673925</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__transfer__3213E83FE2240D34</UnderlyingIndexName>
-    </key>
-    <column id="5905" parent="5619" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(3)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5906" parent="5619" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5907" parent="5619" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5908" parent="5619" name="description">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5909" parent="5619" name="name">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(20 char)|0s</StoredType>
-    </column>
-    <index id="5910" parent="5619" name="PK__type_pla__3213E83FC302D943">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5911" parent="5619" name="UK_banqeasch6xvtvbih2ean0naj">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5912" parent="5619" name="PK__type_pla__3213E83FC302D943">
-      <CreatedTimestamp>2025-03-07.13:53:02.320</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:02.320</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>839674039</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__type_pla__3213E83FC302D943</UnderlyingIndexName>
-    </key>
-    <key id="5913" parent="5619" name="UK_banqeasch6xvtvbih2ean0naj">
-      <CreatedTimestamp>2025-03-07.13:53:04.603</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.603</ModifiedTimestamp>
-      <ObjectId>1239675464</ObjectId>
-      <UnderlyingIndexName>UK_banqeasch6xvtvbih2ean0naj</UnderlyingIndexName>
-    </key>
-    <column id="5914" parent="5620" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5915" parent="5620" name="role_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5916" parent="5620" name="FKj345gk1bovqvfame88rcx7yyx">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:06.953</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:06.953</ModifiedTimestamp>
-      <ObjectId>1687677060</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>887674210</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <foreign-key id="5917" parent="5620" name="FKt7e7djp752sqn6w22i6ocqy6q">
-      <ColNames>role_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:07.037</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:07.037</ModifiedTimestamp>
-      <ObjectId>1703677117</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>759673754</RefTableId>
-      <RefTableName>roles</RefTableName>
-    </foreign-key>
-    <index id="5918" parent="5620" name="PK__user_rol__6EDEA1536F4D240E">
-      <Clustering>1</Clustering>
-      <ColNames>user_id
-role_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5919" parent="5620" name="PK__user_rol__6EDEA1536F4D240E">
-      <CreatedTimestamp>2025-03-07.13:53:02.440</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:02.440</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>871674153</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__user_rol__6EDEA1536F4D240E</UnderlyingIndexName>
-    </key>
-    <column id="5920" parent="5621" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(4)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5921" parent="5621" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5922" parent="5621" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5923" parent="5621" name="active">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>bit|0s</StoredType>
-    </column>
-    <column id="5924" parent="5621" name="email">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(50 char)|0s</StoredType>
-    </column>
-    <column id="5925" parent="5621" name="full_name">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5926" parent="5621" name="password">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <column id="5927" parent="5621" name="phone">
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>varchar(15 char)|0s</StoredType>
-    </column>
-    <column id="5928" parent="5621" name="username">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>varchar(50 char)|0s</StoredType>
-    </column>
-    <column id="5929" parent="5621" name="department_id">
-      <Position>10</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5930" parent="5621" name="FKfi832e3qv89fq376fuh8920y4">
-      <ColNames>department_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:07.153</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:07.153</ModifiedTimestamp>
-      <ObjectId>1719677174</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>439672614</RefTableId>
-      <RefTableName>department</RefTableName>
-    </foreign-key>
-    <index id="5931" parent="5621" name="PK__users__3213E83F34AB6850">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5932" parent="5621" name="UK_6dotkott2kjsp8vw4d0m25fb7">
-      <ColNames>email</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5933" parent="5621" name="UK_du5v5sr43g5bfnji4vb8hg5s3">
-      <ColNames>phone</ColNames>
-      <Position>3</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5934" parent="5621" name="UK_r43af9ap4edm43mmtq01oddj6">
-      <ColNames>username</ColNames>
-      <Position>4</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5935" parent="5621" name="PK__users__3213E83F34AB6850">
-      <CreatedTimestamp>2025-03-07.13:53:02.610</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:02.610</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>903674267</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__users__3213E83F34AB6850</UnderlyingIndexName>
-    </key>
-    <key id="5936" parent="5621" name="UK_6dotkott2kjsp8vw4d0m25fb7">
-      <CreatedTimestamp>2025-03-07.13:53:04.630</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.630</ModifiedTimestamp>
-      <ObjectId>1255675521</ObjectId>
-      <UnderlyingIndexName>UK_6dotkott2kjsp8vw4d0m25fb7</UnderlyingIndexName>
-    </key>
-    <key id="5937" parent="5621" name="UK_du5v5sr43g5bfnji4vb8hg5s3">
-      <CreatedTimestamp>2025-03-07.13:53:04.720</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.720</ModifiedTimestamp>
-      <ObjectId>1271675578</ObjectId>
-      <UnderlyingIndexName>UK_du5v5sr43g5bfnji4vb8hg5s3</UnderlyingIndexName>
-    </key>
-    <key id="5938" parent="5621" name="UK_r43af9ap4edm43mmtq01oddj6">
-      <CreatedTimestamp>2025-03-07.13:53:04.830</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:04.830</ModifiedTimestamp>
-      <ObjectId>1287675635</ObjectId>
-      <UnderlyingIndexName>UK_r43af9ap4edm43mmtq01oddj6</UnderlyingIndexName>
-    </key>
-    <column id="5939" parent="5622" name="name">
+    <column id="5649" parent="5604" name="name">
       <Position>1</Position>
       <StoredType>nvarchar(35 char)|0s</StoredType>
     </column>
-    <column id="5940" parent="5622" name="number">
+    <column id="5650" parent="5604" name="number">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5941" parent="5622" name="type">
+    <column id="5651" parent="5604" name="type">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nchar(3 char)|0s</StoredType>
     </column>
-    <column id="5942" parent="5622" name="low">
+    <column id="5652" parent="5604" name="low">
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5943" parent="5622" name="high">
+    <column id="5653" parent="5604" name="high">
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5944" parent="5622" name="status">
+    <column id="5654" parent="5604" name="status">
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <argument id="5945" parent="5623" name="@categoryId">
-      <Position>1</Position>
-      <StoredType>bigint|0s</StoredType>
-    </argument>
-    <argument id="5946" parent="5623" name="@year">
-      <Position>2</Position>
-      <StoredType>int|0s</StoredType>
-    </argument>
-    <column id="5947" parent="5624" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5948" parent="5624" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5949" parent="5624" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5950" parent="5624" name="in_process">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>bit|0s</StoredType>
-    </column>
-    <column id="5951" parent="5624" name="time">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5952" parent="5624" name="organization_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5953" parent="5624" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5954" parent="5624" name="FKt1alv9hpj5ani25xa533pfmja">
-      <ColNames>organization_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.033</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.033</ModifiedTimestamp>
-      <ObjectId>1909581841</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1269579561</RefTableId>
-      <RefTableName>organization</RefTableName>
-    </foreign-key>
-    <foreign-key id="5955" parent="5624" name="FKet3kdibyco51douuuferdc9gg">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.037</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.037</ModifiedTimestamp>
-      <ObjectId>1925581898</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1493580359</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <index id="5956" parent="5624" name="PK__addition__3213E83FF62A67F4">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5957" parent="5624" name="UK_7vgpb8innntdwagneb75lujnh">
-      <ColNames>time</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5958" parent="5624" name="PK__addition__3213E83FF62A67F4">
-      <CreatedTimestamp>2025-03-07.13:53:58.720</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.720</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>901578250</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__addition__3213E83FF62A67F4</UnderlyingIndexName>
-    </key>
-    <key id="5959" parent="5624" name="UK_7vgpb8innntdwagneb75lujnh">
-      <CreatedTimestamp>2025-03-07.13:53:58.850</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.850</ModifiedTimestamp>
-      <ObjectId>1525580473</ObjectId>
-      <UnderlyingIndexName>UK_7vgpb8innntdwagneb75lujnh</UnderlyingIndexName>
-    </key>
-    <column id="5960" parent="5625" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5961" parent="5625" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5962" parent="5625" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5963" parent="5625" name="price">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>float|0s</StoredType>
-    </column>
-    <column id="5964" parent="5625" name="additional_id">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5965" parent="5625" name="product_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="5966" parent="5625" name="FKnp0b6fmawn2abu44pk4a626qq">
-      <ColNames>additional_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.043</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.043</ModifiedTimestamp>
-      <ObjectId>1941581955</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>885578193</RefTableId>
-      <RefTableName>additional</RefTableName>
-    </foreign-key>
-    <foreign-key id="5967" parent="5625" name="FK4bp7wkl65eg475u7p0ntomr45">
-      <ColNames>product_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.047</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.047</ModifiedTimestamp>
-      <ObjectId>1957582012</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1333579789</RefTableId>
-      <RefTableName>product</RefTableName>
-    </foreign-key>
-    <index id="5968" parent="5625" name="PK__addition__3213E83FFC9F0F77">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5969" parent="5625" name="UK7tv0fqkh2nmtdnes1p3o1j4f9">
-      <ColNames>additional_id
-product_id</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5970" parent="5625" name="PK__addition__3213E83FFC9F0F77">
-      <CreatedTimestamp>2025-03-07.13:53:58.727</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.727</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>933578364</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__addition__3213E83FFC9F0F77</UnderlyingIndexName>
-    </key>
-    <key id="5971" parent="5625" name="UK7tv0fqkh2nmtdnes1p3o1j4f9">
-      <CreatedTimestamp>2025-03-07.13:53:58.857</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.857</ModifiedTimestamp>
-      <ObjectId>1541580530</ObjectId>
-      <UnderlyingIndexName>UK7tv0fqkh2nmtdnes1p3o1j4f9</UnderlyingIndexName>
-    </key>
-    <column id="5972" parent="5626" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5973" parent="5626" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5974" parent="5626" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5975" parent="5626" name="description">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5976" parent="5626" name="name">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(10 char)|0s</StoredType>
-    </column>
-    <index id="5977" parent="5626" name="PK__calculat__3213E83FC7F7A476">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5978" parent="5626" name="UK_tii3g7wc6gwdxyoqg9iixky7u">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5979" parent="5626" name="PK__calculat__3213E83FC7F7A476">
-      <CreatedTimestamp>2025-03-07.13:53:58.730</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.730</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>965578478</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__calculat__3213E83FC7F7A476</UnderlyingIndexName>
-    </key>
-    <key id="5980" parent="5626" name="UK_tii3g7wc6gwdxyoqg9iixky7u">
-      <CreatedTimestamp>2025-03-07.13:53:58.863</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.863</ModifiedTimestamp>
-      <ObjectId>1557580587</ObjectId>
-      <UnderlyingIndexName>UK_tii3g7wc6gwdxyoqg9iixky7u</UnderlyingIndexName>
-    </key>
-    <column id="5981" parent="5627" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="5982" parent="5627" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5983" parent="5627" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5984" parent="5627" name="campus_type">
-      <Position>4</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <column id="5985" parent="5627" name="contact_email">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(50 char)|0s</StoredType>
-    </column>
-    <column id="5986" parent="5627" name="contact_phone">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>varchar(15 char)|0s</StoredType>
-    </column>
-    <column id="5987" parent="5627" name="description">
-      <Position>7</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5988" parent="5627" name="location">
-      <Position>8</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="5989" parent="5627" name="map_url">
-      <Position>9</Position>
-      <StoredType>varchar(5000 char)|0s</StoredType>
-    </column>
-    <column id="5990" parent="5627" name="name">
-      <NotNull>1</NotNull>
-      <Position>10</Position>
-      <StoredType>varchar(15 char)|0s</StoredType>
-    </column>
-    <index id="5991" parent="5627" name="PK__campus__3213E83FD2A83A6E">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5992" parent="5627" name="UK_gnw9rha5q0xuasc6u00s7r5jg">
-      <ColNames>contact_email</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5993" parent="5627" name="UK_r5arl3wxy9dkgpwwlcgfwhv4r">
-      <ColNames>contact_phone</ColNames>
-      <Position>3</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5994" parent="5627" name="UK_81rhu9trr93hw9082igcywgl8">
-      <ColNames>name</ColNames>
-      <Position>4</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5995" parent="5627" name="PK__campus__3213E83FD2A83A6E">
-      <CreatedTimestamp>2025-03-07.13:53:58.740</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.740</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>997578592</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__campus__3213E83FD2A83A6E</UnderlyingIndexName>
-    </key>
-    <key id="5996" parent="5627" name="UK_gnw9rha5q0xuasc6u00s7r5jg">
-      <CreatedTimestamp>2025-03-07.13:53:58.873</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.873</ModifiedTimestamp>
-      <ObjectId>1573580644</ObjectId>
-      <UnderlyingIndexName>UK_gnw9rha5q0xuasc6u00s7r5jg</UnderlyingIndexName>
-    </key>
-    <key id="5997" parent="5627" name="UK_r5arl3wxy9dkgpwwlcgfwhv4r">
-      <CreatedTimestamp>2025-03-07.13:53:58.880</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.880</ModifiedTimestamp>
-      <ObjectId>1589580701</ObjectId>
-      <UnderlyingIndexName>UK_r5arl3wxy9dkgpwwlcgfwhv4r</UnderlyingIndexName>
-    </key>
-    <key id="5998" parent="5627" name="UK_81rhu9trr93hw9082igcywgl8">
-      <CreatedTimestamp>2025-03-07.13:53:58.890</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.890</ModifiedTimestamp>
-      <ObjectId>1605580758</ObjectId>
-      <UnderlyingIndexName>UK_81rhu9trr93hw9082igcywgl8</UnderlyingIndexName>
-    </key>
-    <column id="5999" parent="5628" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(17)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6000" parent="5628" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6001" parent="5628" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6002" parent="5628" name="description">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6003" parent="5628" name="name">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(50 char)|0s</StoredType>
-    </column>
-    <column id="6004" parent="5628" name="group_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="6005" parent="5628" name="FKiieibfvwo09cle4lxta1ltqek">
-      <ColNames>group_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.050</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.050</ModifiedTimestamp>
-      <ObjectId>1973582069</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1077578877</RefTableId>
-      <RefTableName>groups</RefTableName>
-    </foreign-key>
-    <index id="6006" parent="5628" name="PK__category__3213E83FF225C3B2">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6007" parent="5628" name="UK_46ccwnsi9409t36lurvtyljak">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6008" parent="5628" name="PK__category__3213E83FF225C3B2">
-      <CreatedTimestamp>2025-03-07.13:53:58.743</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.743</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1029578706</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__category__3213E83FF225C3B2</UnderlyingIndexName>
-    </key>
-    <key id="6009" parent="5628" name="UK_46ccwnsi9409t36lurvtyljak">
-      <CreatedTimestamp>2025-03-07.13:53:58.897</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.897</ModifiedTimestamp>
-      <ObjectId>1621580815</ObjectId>
-      <UnderlyingIndexName>UK_46ccwnsi9409t36lurvtyljak</UnderlyingIndexName>
-    </key>
-    <column id="6010" parent="5629" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(2)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6011" parent="5629" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6012" parent="5629" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6013" parent="5629" name="description">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6014" parent="5629" name="name">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(30 char)|0s</StoredType>
-    </column>
-    <index id="6015" parent="5629" name="PK__departme__3213E83F4DBA4BC1">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6016" parent="5629" name="UK_1t68827l97cwyxo9r1u6t4p7d">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6017" parent="5629" name="PK__departme__3213E83F4DBA4BC1">
-      <CreatedTimestamp>2025-03-07.13:53:58.750</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.750</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1061578820</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__departme__3213E83F4DBA4BC1</UnderlyingIndexName>
-    </key>
-    <key id="6018" parent="5629" name="UK_1t68827l97cwyxo9r1u6t4p7d">
-      <CreatedTimestamp>2025-03-07.13:53:58.910</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.910</ModifiedTimestamp>
-      <ObjectId>1637580872</ObjectId>
-      <UnderlyingIndexName>UK_1t68827l97cwyxo9r1u6t4p7d</UnderlyingIndexName>
-    </key>
-    <column id="6019" parent="5630" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(7)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6020" parent="5630" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6021" parent="5630" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6022" parent="5630" name="code">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>varchar(50 char)|0s</StoredType>
-    </column>
-    <column id="6023" parent="5630" name="description">
-      <Position>5</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <index id="6024" parent="5630" name="PK__groups__3213E83F92B23121">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6025" parent="5630" name="UK_16fame6je5oyjncqmbl1n5177">
-      <ColNames>code</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6026" parent="5630" name="PK__groups__3213E83F92B23121">
-      <CreatedTimestamp>2025-03-07.13:53:58.757</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.757</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1093578934</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__groups__3213E83F92B23121</UnderlyingIndexName>
-    </key>
-    <key id="6027" parent="5630" name="UK_16fame6je5oyjncqmbl1n5177">
-      <CreatedTimestamp>2025-03-07.13:53:58.920</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.920</ModifiedTimestamp>
-      <ObjectId>1653580929</ObjectId>
-      <UnderlyingIndexName>UK_16fame6je5oyjncqmbl1n5177</UnderlyingIndexName>
-    </key>
-    <column id="6028" parent="5631" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6029" parent="5631" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6030" parent="5631" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6031" parent="5631" name="end_time">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6032" parent="5631" name="in_check">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>bit|0s</StoredType>
-    </column>
-    <column id="6033" parent="5631" name="start_time">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6034" parent="5631" name="time">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <index id="6035" parent="5631" name="PK__inventor__3213E83F4B734161">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6036" parent="5631" name="UK_hovujyb0ylc9yfgdvixtvh0w1">
-      <ColNames>time</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6037" parent="5631" name="PK__inventor__3213E83F4B734161">
-      <CreatedTimestamp>2025-03-07.13:53:58.760</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.760</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1125579048</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__inventor__3213E83F4B734161</UnderlyingIndexName>
-    </key>
-    <key id="6038" parent="5631" name="UK_hovujyb0ylc9yfgdvixtvh0w1">
-      <CreatedTimestamp>2025-03-07.13:53:58.927</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.927</ModifiedTimestamp>
-      <ObjectId>1669580986</ObjectId>
-      <UnderlyingIndexName>UK_hovujyb0ylc9yfgdvixtvh0w1</UnderlyingIndexName>
-    </key>
-    <column id="6039" parent="5632" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6040" parent="5632" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6041" parent="5632" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6042" parent="5632" name="inventory_id">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6043" parent="5632" name="material_id">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6044" parent="5632" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="6045" parent="5632" name="FKmhql0ttsmec7mhdq1t3m62yyw">
-      <ColNames>inventory_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.057</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.057</ModifiedTimestamp>
-      <ObjectId>1989582126</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1109578991</RefTableId>
-      <RefTableName>inventory</RefTableName>
-    </foreign-key>
-    <foreign-key id="6046" parent="5632" name="FK5qsj30m3psgl1hoalnkcwx82t">
-      <ColNames>material_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.060</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.060</ModifiedTimestamp>
-      <ObjectId>2005582183</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1237579447</RefTableId>
-      <RefTableName>material</RefTableName>
-    </foreign-key>
-    <foreign-key id="6047" parent="5632" name="FK9pa2m6hc8dvdyitrksx2is76j">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.067</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.067</ModifiedTimestamp>
-      <ObjectId>2021582240</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1493580359</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <index id="6048" parent="5632" name="PK__inventor__3213E83F04EF3842">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6049" parent="5632" name="UKtg4ph0weovkcle71ddb08bbav">
-      <ColNames>inventory_id
-material_id
-user_id</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6050" parent="5632" name="UKkr0vov4p3xvaelxl1sq5kawyr">
-      <ColNames>inventory_id
-material_id</ColNames>
-      <Position>3</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6051" parent="5632" name="PK__inventor__3213E83F04EF3842">
-      <CreatedTimestamp>2025-03-07.13:53:58.767</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.767</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1157579162</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__inventor__3213E83F04EF3842</UnderlyingIndexName>
-    </key>
-    <key id="6052" parent="5632" name="UKtg4ph0weovkcle71ddb08bbav">
-      <CreatedTimestamp>2025-03-07.13:53:58.933</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.933</ModifiedTimestamp>
-      <ObjectId>1685581043</ObjectId>
-      <UnderlyingIndexName>UKtg4ph0weovkcle71ddb08bbav</UnderlyingIndexName>
-    </key>
-    <key id="6053" parent="5632" name="UKkr0vov4p3xvaelxl1sq5kawyr">
-      <CreatedTimestamp>2025-03-07.13:53:58.940</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.940</ModifiedTimestamp>
-      <ObjectId>1701581100</ObjectId>
-      <UnderlyingIndexName>UKkr0vov4p3xvaelxl1sq5kawyr</UnderlyingIndexName>
-    </key>
-    <column id="6054" parent="5633" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6055" parent="5633" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6056" parent="5633" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6057" parent="5633" name="done">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>bit|0s</StoredType>
-    </column>
-    <column id="6058" parent="5633" name="time">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6059" parent="5633" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="6060" parent="5633" name="FK4ahjfmci7ip34afirwk8wjnwd">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.070</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.070</ModifiedTimestamp>
-      <ObjectId>2037582297</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1493580359</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <index id="6061" parent="5633" name="PK__liquidat__3213E83FA094BF8E">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6062" parent="5633" name="UK_b1altweymi6kymfbhtalunru9">
-      <ColNames>time</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6063" parent="5633" name="PK__liquidat__3213E83FA094BF8E">
-      <CreatedTimestamp>2025-03-07.13:53:58.770</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.770</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1189579276</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__liquidat__3213E83FA094BF8E</UnderlyingIndexName>
-    </key>
-    <key id="6064" parent="5633" name="UK_b1altweymi6kymfbhtalunru9">
-      <CreatedTimestamp>2025-03-07.13:53:58.950</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.950</ModifiedTimestamp>
-      <ObjectId>1717581157</ObjectId>
-      <UnderlyingIndexName>UK_b1altweymi6kymfbhtalunru9</UnderlyingIndexName>
-    </key>
-    <column id="6065" parent="5634" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6066" parent="5634" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6067" parent="5634" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6068" parent="5634" name="liquidate_id">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6069" parent="5634" name="material_id">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="6070" parent="5634" name="FKmhpyesj1t2d35xmhjc4td2ux2">
-      <ColNames>liquidate_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.077</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.077</ModifiedTimestamp>
-      <ObjectId>2053582354</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1173579219</RefTableId>
-      <RefTableName>liquidate</RefTableName>
-    </foreign-key>
-    <foreign-key id="6071" parent="5634" name="FKplvgspnupoetiy5i2a0lyn93q">
-      <ColNames>material_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.083</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.083</ModifiedTimestamp>
-      <ObjectId>2069582411</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1237579447</RefTableId>
-      <RefTableName>material</RefTableName>
-    </foreign-key>
-    <index id="6072" parent="5634" name="PK__liquidat__3213E83FA735DFC2">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6073" parent="5634" name="UKej6nr1ediw6l886bew5h7nago">
-      <ColNames>liquidate_id
-material_id</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6074" parent="5634" name="UK_o62onyfih7oakg9iuqf1uur85">
-      <ColNames>material_id</ColNames>
-      <Position>3</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6075" parent="5634" name="PK__liquidat__3213E83FA735DFC2">
-      <CreatedTimestamp>2025-03-07.13:53:58.777</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.777</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1221579390</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__liquidat__3213E83FA735DFC2</UnderlyingIndexName>
-    </key>
-    <key id="6076" parent="5634" name="UKej6nr1ediw6l886bew5h7nago">
-      <CreatedTimestamp>2025-03-07.13:53:58.957</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.957</ModifiedTimestamp>
-      <ObjectId>1733581214</ObjectId>
-      <UnderlyingIndexName>UKej6nr1ediw6l886bew5h7nago</UnderlyingIndexName>
-    </key>
-    <key id="6077" parent="5634" name="UK_o62onyfih7oakg9iuqf1uur85">
-      <CreatedTimestamp>2025-03-07.13:53:58.963</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.963</ModifiedTimestamp>
-      <ObjectId>1749581271</ObjectId>
-      <UnderlyingIndexName>UK_o62onyfih7oakg9iuqf1uur85</UnderlyingIndexName>
-    </key>
-    <column id="6078" parent="5635" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6079" parent="5635" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6080" parent="5635" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6081" parent="5635" name="credential_code">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>varchar(100 char)|0s</StoredType>
-    </column>
-    <column id="6082" parent="5635" name="is_have_include">
-      <Position>5</Position>
-      <StoredType>bit|0s</StoredType>
-    </column>
-    <column id="6083" parent="5635" name="parent_code">
-      <Position>6</Position>
-      <StoredType>varchar(100 char)|0s</StoredType>
-    </column>
-    <column id="6084" parent="5635" name="status">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <column id="6085" parent="5635" name="time_start_depreciation">
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6086" parent="5635" name="additional_id">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6087" parent="5635" name="current_place_id">
-      <Position>10</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6088" parent="5635" name="product_id">
-      <NotNull>1</NotNull>
-      <Position>11</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6089" parent="5635" name="user_id">
-      <Position>12</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="6090" parent="5635" name="FKausejg8uiebrhdat6ak37jagk">
-      <ColNames>additional_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.090</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.090</ModifiedTimestamp>
-      <ObjectId>2085582468</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>885578193</RefTableId>
-      <RefTableName>additional</RefTableName>
-    </foreign-key>
-    <foreign-key id="6091" parent="5635" name="FKge9hhe8jxcmkynun8igiypa75">
-      <ColNames>current_place_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.100</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.100</ModifiedTimestamp>
-      <ObjectId>2101582525</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1301579675</RefTableId>
-      <RefTableName>place</RefTableName>
-    </foreign-key>
-    <foreign-key id="6092" parent="5635" name="FKmkxedk79wsqc47bm4hm0c4jfw">
-      <ColNames>product_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.103</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.103</ModifiedTimestamp>
-      <ObjectId>2117582582</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1333579789</RefTableId>
-      <RefTableName>product</RefTableName>
-    </foreign-key>
-    <foreign-key id="6093" parent="5635" name="FK6ps0e9pqttae1ygohma94q2r5">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.110</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.110</ModifiedTimestamp>
-      <ObjectId>2133582639</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1493580359</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <index id="6094" parent="5635" name="PK__material__3213E83F53317F84">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6095" parent="5635" name="UK_2en3vw9sqw80gnwnghthv3cs2">
-      <ColNames>credential_code</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6096" parent="5635" name="PK__material__3213E83F53317F84">
-      <CreatedTimestamp>2025-03-07.13:53:58.783</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.783</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1253579504</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__material__3213E83F53317F84</UnderlyingIndexName>
-    </key>
-    <key id="6097" parent="5635" name="UK_2en3vw9sqw80gnwnghthv3cs2">
-      <CreatedTimestamp>2025-03-07.13:53:58.970</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.970</ModifiedTimestamp>
-      <ObjectId>1765581328</ObjectId>
-      <UnderlyingIndexName>UK_2en3vw9sqw80gnwnghthv3cs2</UnderlyingIndexName>
-    </key>
-    <column id="6098" parent="5636" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6099" parent="5636" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6100" parent="5636" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6101" parent="5636" name="contact">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6102" parent="5636" name="name">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(15 char)|0s</StoredType>
-    </column>
-    <index id="6103" parent="5636" name="PK__organiza__3213E83FD7A1D668">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6104" parent="5636" name="UK_8j5y8ipk73yx2joy9yr653c9t">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6105" parent="5636" name="PK__organiza__3213E83FD7A1D668">
-      <CreatedTimestamp>2025-03-07.13:53:58.790</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.790</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1285579618</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__organiza__3213E83FD7A1D668</UnderlyingIndexName>
-    </key>
-    <key id="6106" parent="5636" name="UK_8j5y8ipk73yx2joy9yr653c9t">
-      <CreatedTimestamp>2025-03-07.13:53:58.977</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.977</ModifiedTimestamp>
-      <ObjectId>1781581385</ObjectId>
-      <UnderlyingIndexName>UK_8j5y8ipk73yx2joy9yr653c9t</UnderlyingIndexName>
-    </key>
-    <column id="6107" parent="5637" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6108" parent="5637" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6109" parent="5637" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6110" parent="5637" name="code">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>varchar(20 char)|0s</StoredType>
-    </column>
-    <column id="6111" parent="5637" name="description">
-      <Position>5</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6112" parent="5637" name="direction">
-      <Position>6</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6113" parent="5637" name="floor">
-      <Position>7</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="6114" parent="5637" name="name_specification">
-      <Position>8</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6115" parent="5637" name="campus_id">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6116" parent="5637" name="department_id">
-      <Position>10</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6117" parent="5637" name="type_place_id">
-      <NotNull>1</NotNull>
-      <Position>11</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="6118" parent="5637" name="FKtnvala5eibf0cv7fbad0i3a3h">
-      <ColNames>campus_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.120</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.120</ModifiedTimestamp>
-      <ObjectId>2099048</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>981578535</RefTableId>
-      <RefTableName>campus</RefTableName>
-    </foreign-key>
-    <foreign-key id="6119" parent="5637" name="FKqyvyl0141jaamwxromhrv9iu0">
-      <ColNames>department_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.123</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.123</ModifiedTimestamp>
-      <ObjectId>18099105</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1045578763</RefTableId>
-      <RefTableName>department</RefTableName>
-    </foreign-key>
-    <foreign-key id="6120" parent="5637" name="FKs9jxnngmo9yrdkepl784c9v30">
-      <ColNames>type_place_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.130</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.130</ModifiedTimestamp>
-      <ObjectId>34099162</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1429580131</RefTableId>
-      <RefTableName>type_place</RefTableName>
-    </foreign-key>
-    <index id="6121" parent="5637" name="PK__place__3213E83FEA6599EF">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6122" parent="5637" name="UK_r186fpmygnarrcd201o1vxe8j">
-      <ColNames>code</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6123" parent="5637" name="PK__place__3213E83FEA6599EF">
-      <CreatedTimestamp>2025-03-07.13:53:58.800</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.800</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1317579732</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__place__3213E83FEA6599EF</UnderlyingIndexName>
-    </key>
-    <key id="6124" parent="5637" name="UK_r186fpmygnarrcd201o1vxe8j">
-      <CreatedTimestamp>2025-03-07.13:53:58.983</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.983</ModifiedTimestamp>
-      <ObjectId>1797581442</ObjectId>
-      <UnderlyingIndexName>UK_r186fpmygnarrcd201o1vxe8j</UnderlyingIndexName>
-    </key>
-    <column id="6125" parent="5638" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6126" parent="5638" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6127" parent="5638" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6128" parent="5638" name="allocation_duration">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="6129" parent="5638" name="depreciation_rate">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>float|0s</StoredType>
-    </column>
-    <column id="6130" parent="5638" name="description">
-      <Position>6</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6131" parent="5638" name="name">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>varchar(200 char)|0s</StoredType>
-    </column>
-    <column id="6132" parent="5638" name="origin">
-      <Position>8</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6133" parent="5638" name="time_allocation_type">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <column id="6134" parent="5638" name="type">
-      <NotNull>1</NotNull>
-      <Position>10</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <column id="6135" parent="5638" name="calculation_unit">
-      <NotNull>1</NotNull>
-      <Position>11</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6136" parent="5638" name="category_id">
-      <NotNull>1</NotNull>
-      <Position>12</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="6137" parent="5638" name="FKk34cppr38wshuikl72d8mnvqh">
-      <ColNames>calculation_unit</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.133</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.133</ModifiedTimestamp>
-      <ObjectId>50099219</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>949578421</RefTableId>
-      <RefTableName>calculation_unit</RefTableName>
-    </foreign-key>
-    <foreign-key id="6138" parent="5638" name="FK1mtsbur82frn64de7balymq9s">
-      <ColNames>category_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.140</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.140</ModifiedTimestamp>
-      <ObjectId>66099276</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1013578649</RefTableId>
-      <RefTableName>category</RefTableName>
-    </foreign-key>
-    <index id="6139" parent="5638" name="PK__product__3213E83FFC4E5133">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6140" parent="5638" name="UK_jmivyxk9rmgysrmsqw15lqr5b">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6141" parent="5638" name="PK__product__3213E83FFC4E5133">
-      <CreatedTimestamp>2025-03-07.13:53:58.807</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.807</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1349579846</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__product__3213E83FFC4E5133</UnderlyingIndexName>
-    </key>
-    <key id="6142" parent="5638" name="UK_jmivyxk9rmgysrmsqw15lqr5b">
-      <CreatedTimestamp>2025-03-07.13:53:58.990</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.990</ModifiedTimestamp>
-      <ObjectId>1813581499</ObjectId>
-      <UnderlyingIndexName>UK_jmivyxk9rmgysrmsqw15lqr5b</UnderlyingIndexName>
-    </key>
-    <column id="6143" parent="5639" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(10010)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6144" parent="5639" name="role_name">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <index id="6145" parent="5639" name="PK__roles__3213E83F6F57375F">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6146" parent="5639" name="UK_716hgxp60ym1lifrdgp67xt5k">
-      <ColNames>role_name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6147" parent="5639" name="PK__roles__3213E83F6F57375F">
-      <CreatedTimestamp>2025-03-07.13:53:58.813</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.813</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1381579960</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__roles__3213E83F6F57375F</UnderlyingIndexName>
-    </key>
-    <key id="6148" parent="5639" name="UK_716hgxp60ym1lifrdgp67xt5k">
-      <CreatedTimestamp>2025-03-07.13:53:58.997</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.997</ModifiedTimestamp>
-      <ObjectId>1829581556</ObjectId>
-      <UnderlyingIndexName>UK_716hgxp60ym1lifrdgp67xt5k</UnderlyingIndexName>
-    </key>
-    <column id="6149" parent="5640" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6150" parent="5640" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6151" parent="5640" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6152" parent="5640" name="reason">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6153" parent="5640" name="time">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6154" parent="5640" name="material_id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6155" parent="5640" name="place_from_id">
-      <Position>7</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6156" parent="5640" name="place_target_id">
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6157" parent="5640" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="6158" parent="5640" name="FKr9taxmn4yd35kssgo9h8hjyo6">
-      <ColNames>material_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.143</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.143</ModifiedTimestamp>
-      <ObjectId>82099333</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1237579447</RefTableId>
-      <RefTableName>material</RefTableName>
-    </foreign-key>
-    <foreign-key id="6159" parent="5640" name="FKh6k82y3uusggkjrdjyooeh5ap">
-      <ColNames>place_from_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.150</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.150</ModifiedTimestamp>
-      <ObjectId>98099390</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1301579675</RefTableId>
-      <RefTableName>place</RefTableName>
-    </foreign-key>
-    <foreign-key id="6160" parent="5640" name="FK4tqflfcldfpk2e6ly75loggi7">
-      <ColNames>place_target_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.153</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.153</ModifiedTimestamp>
-      <ObjectId>114099447</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1301579675</RefTableId>
-      <RefTableName>place</RefTableName>
-    </foreign-key>
-    <foreign-key id="6161" parent="5640" name="FKs4oor2bkpderr1fnrejryox0w">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.160</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.160</ModifiedTimestamp>
-      <ObjectId>130099504</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1493580359</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <index id="6162" parent="5640" name="PK__transfer__3213E83FE4CBF85F">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6163" parent="5640" name="PK__transfer__3213E83FE4CBF85F">
-      <CreatedTimestamp>2025-03-07.13:53:58.820</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.820</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1413580074</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__transfer__3213E83FE4CBF85F</UnderlyingIndexName>
-    </key>
-    <column id="6164" parent="5641" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(6)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6165" parent="5641" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6166" parent="5641" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6167" parent="5641" name="description">
-      <Position>4</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6168" parent="5641" name="name">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(20 char)|0s</StoredType>
-    </column>
-    <index id="6169" parent="5641" name="PK__type_pla__3213E83F6E659901">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6170" parent="5641" name="UK_banqeasch6xvtvbih2ean0naj">
-      <ColNames>name</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6171" parent="5641" name="PK__type_pla__3213E83F6E659901">
-      <CreatedTimestamp>2025-03-07.13:53:58.827</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.827</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1445580188</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__type_pla__3213E83F6E659901</UnderlyingIndexName>
-    </key>
-    <key id="6172" parent="5641" name="UK_banqeasch6xvtvbih2ean0naj">
-      <CreatedTimestamp>2025-03-07.13:53:59.007</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.007</ModifiedTimestamp>
-      <ObjectId>1845581613</ObjectId>
-      <UnderlyingIndexName>UK_banqeasch6xvtvbih2ean0naj</UnderlyingIndexName>
-    </key>
-    <column id="6173" parent="5642" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6174" parent="5642" name="role_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="6175" parent="5642" name="FKj345gk1bovqvfame88rcx7yyx">
-      <ColNames>user_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.167</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.167</ModifiedTimestamp>
-      <ObjectId>162099618</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1493580359</RefTableId>
-      <RefTableName>users</RefTableName>
-    </foreign-key>
-    <foreign-key id="6176" parent="5642" name="FKt7e7djp752sqn6w22i6ocqy6q">
-      <ColNames>role_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.163</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.163</ModifiedTimestamp>
-      <ObjectId>146099561</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1365579903</RefTableId>
-      <RefTableName>roles</RefTableName>
-    </foreign-key>
-    <index id="6177" parent="5642" name="PK__user_rol__6EDEA15361FD2F9B">
-      <Clustering>1</Clustering>
-      <ColNames>user_id
-role_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6178" parent="5642" name="PK__user_rol__6EDEA15361FD2F9B">
-      <CreatedTimestamp>2025-03-07.13:53:58.833</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.833</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1477580302</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__user_rol__6EDEA15361FD2F9B</UnderlyingIndexName>
-    </key>
-    <column id="6179" parent="5643" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <SequenceIdentity>1(6)</SequenceIdentity>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <column id="6180" parent="5643" name="created_at">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6181" parent="5643" name="updated_at">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="6182" parent="5643" name="active">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>bit|0s</StoredType>
-    </column>
-    <column id="6183" parent="5643" name="email">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>varchar(50 char)|0s</StoredType>
-    </column>
-    <column id="6184" parent="5643" name="full_name">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>ntext|0s</StoredType>
-    </column>
-    <column id="6185" parent="5643" name="password">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>varchar(255 char)|0s</StoredType>
-    </column>
-    <column id="6186" parent="5643" name="phone">
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>varchar(15 char)|0s</StoredType>
-    </column>
-    <column id="6187" parent="5643" name="username">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>varchar(50 char)|0s</StoredType>
-    </column>
-    <column id="6188" parent="5643" name="department_id">
-      <Position>10</Position>
-      <StoredType>bigint|0s</StoredType>
-    </column>
-    <foreign-key id="6189" parent="5643" name="FKfi832e3qv89fq376fuh8920y4">
-      <ColNames>department_id</ColNames>
-      <CreatedTimestamp>2025-03-07.13:53:59.170</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.170</ModifiedTimestamp>
-      <ObjectId>178099675</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefTableId>1045578763</RefTableId>
-      <RefTableName>department</RefTableName>
-    </foreign-key>
-    <index id="6190" parent="5643" name="PK__users__3213E83FE2088CA5">
-      <Clustering>1</Clustering>
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6191" parent="5643" name="UK_6dotkott2kjsp8vw4d0m25fb7">
-      <ColNames>email</ColNames>
-      <Position>2</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6192" parent="5643" name="UK_du5v5sr43g5bfnji4vb8hg5s3">
-      <ColNames>phone</ColNames>
-      <Position>3</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="6193" parent="5643" name="UK_r43af9ap4edm43mmtq01oddj6">
-      <ColNames>username</ColNames>
-      <Position>4</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="6194" parent="5643" name="PK__users__3213E83FE2088CA5">
-      <CreatedTimestamp>2025-03-07.13:53:58.840</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:58.840</ModifiedTimestamp>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>1509580416</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK__users__3213E83FE2088CA5</UnderlyingIndexName>
-    </key>
-    <key id="6195" parent="5643" name="UK_6dotkott2kjsp8vw4d0m25fb7">
-      <CreatedTimestamp>2025-03-07.13:53:59.013</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.013</ModifiedTimestamp>
-      <ObjectId>1861581670</ObjectId>
-      <UnderlyingIndexName>UK_6dotkott2kjsp8vw4d0m25fb7</UnderlyingIndexName>
-    </key>
-    <key id="6196" parent="5643" name="UK_du5v5sr43g5bfnji4vb8hg5s3">
-      <CreatedTimestamp>2025-03-07.13:53:59.020</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.020</ModifiedTimestamp>
-      <ObjectId>1877581727</ObjectId>
-      <UnderlyingIndexName>UK_du5v5sr43g5bfnji4vb8hg5s3</UnderlyingIndexName>
-    </key>
-    <key id="6197" parent="5643" name="UK_r43af9ap4edm43mmtq01oddj6">
-      <CreatedTimestamp>2025-03-07.13:53:59.030</CreatedTimestamp>
-      <ModifiedTimestamp>2025-03-07.13:53:59.030</ModifiedTimestamp>
-      <ObjectId>1893581784</ObjectId>
-      <UnderlyingIndexName>UK_r43af9ap4edm43mmtq01oddj6</UnderlyingIndexName>
-    </key>
   </database-model>
 </dataSource>

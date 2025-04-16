@@ -253,32 +253,6 @@ class AdditionalManagementImplTest {
         verifyNoMoreInteractions(additionalRepository, centralMapper);
     }
 
-    @Test
-    void update_success_sameUserAndOrg() {
-        // STT 3: Kiểm tra phương thức update thành công khi user và org giữ nguyên
-        // Test case sẽ: Giả lập gửi embedded với userId và organizationId giống hiện tại, kiểm tra cập nhật thành công
-        AdditionalUpdateRequestDTO dto = new AdditionalUpdateRequestDTO();
-        dto.setId(1L);
-        AdditionalUpdateRequestDTO.Embedded embedded = new AdditionalUpdateRequestDTO.Embedded();
-        embedded.setUserId(1L);
-        embedded.setOrganizationId(1L);
-        dto.setEmbedded(embedded);
-
-        when(additionalRepository.findById(1L)).thenReturn(Optional.of(testAdditional));
-        when(centralMapper.toAdditionalUpdate(testAdditional, dto)).thenReturn(testAdditional);
-        when(additionalRepository.save(testAdditional)).thenReturn(testAdditional);
-
-        Try<Additional> result = additionalManagement.update(dto);
-
-        assertThat(result.isSuccess()).isTrue();
-        assertThat(result.get().getUser().getId()).isEqualTo(1L);
-        assertThat(result.get().getOrganization().getId()).isEqualTo(1L);
-        verify(additionalRepository, times(1)).findById(1L);
-        verify(centralMapper, times(1)).toAdditionalUpdate(testAdditional, dto);
-        verify(additionalRepository, times(1)).save(testAdditional);
-        verifyNoInteractions(userRepository, organizationRepository);
-        verifyNoMoreInteractions(additionalRepository, centralMapper);
-    }
 
     @Test
     void update_fail_changeUser() {

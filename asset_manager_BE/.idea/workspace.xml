@@ -10,6 +10,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="D:\New folder\coverage" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -48,7 +52,14 @@
     "JUnit.AdditionalManagementImplTest.testGetOne_fail_notFound.executor": "Run",
     "JUnit.AdditionalManagementImplTest.testGetOne_success.executor": "Coverage",
     "JUnit.AdditionalManagementImplTest.update_fail_changeUser.executor": "Run",
-    "JUnit.LiquidateManagementImplTest.executor": "Debug",
+    "JUnit.InventoryManagementImplTest.delete_failure_dueToCheckedMaterials.executor": "Run",
+    "JUnit.InventoryManagementImplTest.delete_failure_dueToLinkedMaterial.executor": "Coverage",
+    "JUnit.InventoryManagementImplTest.delete_failure_hasCheckedMaterials.executor": "Coverage",
+    "JUnit.InventoryManagementImplTest.executor": "Coverage",
+    "JUnit.LiquidateManagementImplTest.delete_fail_has_materials.executor": "Run",
+    "JUnit.LiquidateManagementImplTest.executor": "Coverage",
+    "JUnit.LiquidateManagementImplTest.update_failure_userNotFound.executor": "Run",
+    "JUnit.LiquidateManagementImplTest.update_success_sameUser.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -56,6 +67,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "minh",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/New folder/coverage",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -80,7 +92,7 @@
       <recent name="com.ptit.asset.service.manager.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AdditionalManagementImplTest">
+  <component name="RunManager" selected="JUnit.InventoryManagementImplTest">
     <configuration name="Asset Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.AssetApplication" />
       <module name="Asset" />
@@ -88,7 +100,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -97,13 +109,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.InventoryManagementImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest.delete_fail_has_materials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryManagementImplTest.delete_failure_dueToCheckedMaterials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -112,14 +124,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
-      <option name="METHOD_NAME" value="delete_fail_has_materials" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.InventoryManagementImplTest" />
+      <option name="METHOD_NAME" value="delete_failure_dueToCheckedMaterials" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest.delete_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryManagementImplTest.delete_failure_dueToLinkedMaterial" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -128,14 +140,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
-      <option name="METHOD_NAME" value="delete_success" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.InventoryManagementImplTest" />
+      <option name="METHOD_NAME" value="delete_failure_dueToLinkedMaterial" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest.delete_success_inProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryManagementImplTest.delete_failure_hasCheckedMaterials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -144,14 +156,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
-      <option name="METHOD_NAME" value="delete_success_inProcess" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.InventoryManagementImplTest" />
+      <option name="METHOD_NAME" value="delete_failure_hasCheckedMaterials" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest.update_fail_changeUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LiquidateManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -160,9 +172,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
-      <option name="METHOD_NAME" value="update_fail_changeUser" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.LiquidateManagementImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -182,20 +193,20 @@
     </configuration>
     <list>
       <item itemvalue="Application.Asset Application" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest.delete_fail_has_materials" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest.delete_success" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest.update_fail_changeUser" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest.delete_success_inProcess" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest" />
+      <item itemvalue="JUnit.InventoryManagementImplTest.delete_failure_dueToCheckedMaterials" />
+      <item itemvalue="JUnit.InventoryManagementImplTest.delete_failure_dueToLinkedMaterial" />
+      <item itemvalue="JUnit.InventoryManagementImplTest.delete_failure_hasCheckedMaterials" />
+      <item itemvalue="JUnit.InventoryManagementImplTest" />
+      <item itemvalue="JUnit.LiquidateManagementImplTest" />
       <item itemvalue="Spring Boot.AssetApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdditionalManagementImplTest" />
-        <item itemvalue="JUnit.AdditionalManagementImplTest.delete_fail_has_materials" />
-        <item itemvalue="JUnit.AdditionalManagementImplTest.delete_success" />
-        <item itemvalue="JUnit.AdditionalManagementImplTest.update_fail_changeUser" />
-        <item itemvalue="JUnit.AdditionalManagementImplTest.delete_success_inProcess" />
+        <item itemvalue="JUnit.InventoryManagementImplTest" />
+        <item itemvalue="JUnit.InventoryManagementImplTest.delete_failure_hasCheckedMaterials" />
+        <item itemvalue="JUnit.InventoryManagementImplTest.delete_failure_dueToLinkedMaterial" />
+        <item itemvalue="JUnit.InventoryManagementImplTest.delete_failure_dueToCheckedMaterials" />
+        <item itemvalue="JUnit.LiquidateManagementImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -237,6 +248,11 @@
       <workItem from="1744512498633" duration="2275000" />
       <workItem from="1744559286544" duration="9830000" />
       <workItem from="1744619396985" duration="7888000" />
+      <workItem from="1744639335518" duration="866000" />
+      <workItem from="1744641691183" duration="6668000" />
+      <workItem from="1744698706490" duration="10507000" />
+      <workItem from="1744729836403" duration="7137000" />
+      <workItem from="1744769997926" duration="8974000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1602485942280</created>
@@ -577,20 +593,40 @@
     <MESSAGE value="# enable security for api endpoint&#10;# Add content message in scan QR code" />
     <option name="LAST_COMMIT_MESSAGE" value="# enable security for api endpoint&#10;# Add content message in scan QR code" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/ptit/asset/service/manager/impl/LiquidateManagementImplTest.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest.ic" NAME="AdditionalManagementImplTest Coverage Results" MODIFIED="1744627930885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest.ic" NAME="AdditionalManagementImplTest Coverage Results" MODIFIED="1744646216933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$InventoryManagementImplTest_delete_failure_dueToLinkedMaterial.ic" NAME="InventoryManagementImplTest.delete_failure_dueToLinkedMaterial Coverage Results" MODIFIED="1744780363443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_testGetOne_success.ic" NAME="AdditionalManagementImplTest.testGetOne_success Coverage Results" MODIFIED="1744193699068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$InventoryManagementImplTest_delete_failure_hasCheckedMaterials.ic" NAME="InventoryManagementImplTest.delete_failure_hasCheckedMaterials Coverage Results" MODIFIED="1744784054541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_delete_shouldSucceed_whenAdditionalIsInProcess.ic" NAME="AdditionalManagementImplTest.delete_shouldSucceed_whenAdditionalIsInProcess Coverage Results" MODIFIED="1744560966937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/asset_manager_BE$LiquidateManagementImplTest.ic" NAME="LiquidateManagementImplTest Coverage Results" MODIFIED="1744448369103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_delete_success_inProcess.ic" NAME="AdditionalManagementImplTest.delete_success_inProcess Coverage Results" MODIFIED="1744562125059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_delete_success_inProcess.ic" NAME="AdditionalManagementImplTest.delete_success_inProcess Coverage Results" MODIFIED="1744562125059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/asset_manager_BE$LiquidateManagementImplTest.ic" NAME="LiquidateManagementImplTest Coverage Results" MODIFIED="1744772234714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$InventoryManagementImplTest.ic" NAME="InventoryManagementImplTest Coverage Results" MODIFIED="1744784407350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_testGetOne_fail_notFound.ic" NAME="AdditionalManagementImplTest.testGetOne_fail_notFound Coverage Results" MODIFIED="1744293149382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="9424f87f-00d8-409d-a013-70fcfa0e92ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../asset_manager_FE/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../asset_manager_FE/package-lock.json" afterDir="false" />
-    </list>
-=======
     <list default="true" id="9424f87f-00d8-409d-a013-70fcfa0e92ad" name="Default Changelist" comment="# enable security for api endpoint&#10;# Add content message in scan QR code" />
->>>>>>> 5a77fd778ce00e0304ddb9f5e12261106f54a5ac
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,48 +16,31 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="UserManagementImplTest" />
+    </enabled-run-configurations>
+  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
+        &quot;isMigrated&quot;: true
+        }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
+        &quot;associatedIndex&quot;: 5
+        }</component>
   <component name="ProjectId" id="1ilXoYfgEEmdRNKxqTcP9md8b2l" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Asset Application.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;daduc&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Document/PTIT/ProjectTest/asset_manager/asset_manager_FE&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Asset Application.executor": "Run",
@@ -77,13 +54,33 @@
     "JUnit.AdditionalManagementImplTest.testGetOne_fail_notFound.executor": "Run",
     "JUnit.AdditionalManagementImplTest.testGetOne_success.executor": "Coverage",
     "JUnit.AdditionalManagementImplTest.update_fail_changeUser.executor": "Run",
+    "JUnit.CampusManagementImplTest.executor": "Run",
+    "JUnit.CampusManagementImplTest.fetchAll_success_returnsCampuses.executor": "Coverage",
     "JUnit.LiquidateManagementImplTest.executor": "Debug",
+    "JUnit.OrganizationManagementImplTest.create_edgeCase_nullDTO_returnsFailure.executor": "Run",
+    "JUnit.OrganizationManagementImplTest.delete_edgeCase_nullId_returnsFailure.executor": "Run",
+    "JUnit.OrganizationManagementImplTest.executor": "Run",
+    "JUnit.OrganizationManagementImplTest.getOne_edgeCase_nullId_returnsFailure.executor": "Run",
+    "JUnit.OrganizationManagementImplTest.update_edgeCase_nullOrganization_returnsFailure.executor": "Run",
+    "JUnit.OrganizationManagementImplTest.update_edgeCase_nullOrganization_throwsNullPointerException.executor": "Run",
+    "JUnit.OrganizationManagementImplTest.update_success_validOrganization_returnsUpdatedOrganization.executor": "Run",
+    "JUnit.ProductManagementImplTest.create_NullDTO_ReturnsFailure.executor": "Run",
+    "JUnit.ProductManagementImplTest.delete_WhenProductExists_ReturnsSuccess.executor": "Coverage",
+    "JUnit.ProductManagementImplTest.executor": "Run",
+    "JUnit.ProductManagementImplTest.update_WhenCalculationUnitIdIsNull_ReturnsSuccess.executor": "Run",
+    "JUnit.ProductManagementImplTest.update_WhenCategoryChanged_ReturnsSuccess.executor": "Run",
+    "JUnit.ProductManagementImplTest.update_WhenCategoryIdIsNull_ReturnsSuccess.executor": "Run",
+    "JUnit.ProductManagementImplTest.update_WhenProductNotFound_ReturnsFailure.executor": "Run",
+    "JUnit.UserManagementImplTest.executor": "Coverage",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "minh",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "daduc",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,7 +91,6 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "application.passwordSafe",
     "vue.rearranger.settings.migration": "true"
->>>>>>> 5a77fd778ce00e0304ddb9f5e12261106f54a5ac
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -106,11 +102,17 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\dev\graduating-space\source-code\Asset\src\main\resources\public\image" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.ptit.asset.service.manager.impl" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.ptit.asset.service.manager.impl" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.AdditionalManagementImplTest">
+  <component name="RunManager" selected="JUnit.UserManagementImplTest">
     <configuration name="Asset Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.AssetApplication" />
       <module name="Asset" />
@@ -118,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -127,13 +129,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.ProductManagementImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest.delete_fail_has_materials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductManagementImplTest.update_WhenCalculationUnitIdIsNull_ReturnsSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -142,14 +144,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
-      <option name="METHOD_NAME" value="delete_fail_has_materials" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.ProductManagementImplTest" />
+      <option name="METHOD_NAME" value="update_WhenCalculationUnitIdIsNull_ReturnsSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest.delete_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductManagementImplTest.update_WhenCategoryIdIsNull_ReturnsSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -158,14 +160,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
-      <option name="METHOD_NAME" value="delete_success" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.ProductManagementImplTest" />
+      <option name="METHOD_NAME" value="update_WhenCategoryIdIsNull_ReturnsSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest.delete_success_inProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductManagementImplTest.update_WhenProductNotFound_ReturnsFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -174,14 +176,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
-      <option name="METHOD_NAME" value="delete_success_inProcess" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.ProductManagementImplTest" />
+      <option name="METHOD_NAME" value="update_WhenProductNotFound_ReturnsFailure" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest.update_fail_changeUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -190,9 +192,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.AdditionalManagementImplTest" />
-      <option name="METHOD_NAME" value="update_fail_changeUser" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.UserManagementImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -212,33 +213,28 @@
     </configuration>
     <list>
       <item itemvalue="Application.Asset Application" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest.delete_fail_has_materials" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest.delete_success" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest.update_fail_changeUser" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest.delete_success_inProcess" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest" />
+      <item itemvalue="JUnit.ProductManagementImplTest.update_WhenCalculationUnitIdIsNull_ReturnsSuccess" />
+      <item itemvalue="JUnit.ProductManagementImplTest.update_WhenCategoryIdIsNull_ReturnsSuccess" />
+      <item itemvalue="JUnit.ProductManagementImplTest.update_WhenProductNotFound_ReturnsFailure" />
+      <item itemvalue="JUnit.UserManagementImplTest" />
+      <item itemvalue="JUnit.ProductManagementImplTest" />
       <item itemvalue="Spring Boot.AssetApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AdditionalManagementImplTest" />
-        <item itemvalue="JUnit.AdditionalManagementImplTest.delete_fail_has_materials" />
-        <item itemvalue="JUnit.AdditionalManagementImplTest.delete_success" />
-        <item itemvalue="JUnit.AdditionalManagementImplTest.update_fail_changeUser" />
-        <item itemvalue="JUnit.AdditionalManagementImplTest.delete_success_inProcess" />
+        <item itemvalue="JUnit.UserManagementImplTest" />
+        <item itemvalue="JUnit.ProductManagementImplTest" />
+        <item itemvalue="JUnit.ProductManagementImplTest.update_WhenProductNotFound_ReturnsFailure" />
+        <item itemvalue="JUnit.ProductManagementImplTest.update_WhenCalculationUnitIdIsNull_ReturnsSuccess" />
+        <item itemvalue="JUnit.ProductManagementImplTest.update_WhenCategoryIdIsNull_ReturnsSuccess" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-<<<<<<< HEAD
         <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
         <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
-=======
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
->>>>>>> 5a77fd778ce00e0304ddb9f5e12261106f54a5ac
       </set>
     </attachedChunks>
   </component>
@@ -260,11 +256,6 @@
       <workItem from="1741600170106" duration="1506000" />
       <workItem from="1741601689704" duration="247000" />
       <workItem from="1741624454480" duration="2589000" />
-<<<<<<< HEAD
-      <workItem from="1743752566922" duration="3085000" />
-      <workItem from="1744727419597" duration="1178000" />
-      <workItem from="1744728642712" duration="885000" />
-=======
       <workItem from="1743866998339" duration="54000" />
       <workItem from="1744009075426" duration="17255000" />
       <workItem from="1744178142813" duration="343000" />
@@ -277,7 +268,9 @@
       <workItem from="1744512498633" duration="2275000" />
       <workItem from="1744559286544" duration="9830000" />
       <workItem from="1744619396985" duration="7888000" />
->>>>>>> 5a77fd778ce00e0304ddb9f5e12261106f54a5ac
+      <workItem from="1744783888148" duration="14356000" />
+      <workItem from="1744807443948" duration="686000" />
+      <workItem from="1744826009501" duration="4584000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1602485942280</created>
@@ -619,22 +612,40 @@
     <option name="LAST_COMMIT_MESSAGE" value="# enable security for api endpoint&#10;# Add content message in scan QR code" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest.ic" NAME="AdditionalManagementImplTest Coverage Results" MODIFIED="1744627930885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_testGetOne_fail_notFound.ic" NAME="AdditionalManagementImplTest.testGetOne_fail_notFound Coverage Results" MODIFIED="1744293149382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$CampusManagementImplTest.ic" NAME="CampusManagementImplTest Coverage Results" MODIFIED="1744791340340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$ProductManagementImplTest.ic" NAME="ProductManagementImplTest Coverage Results" MODIFIED="1744833347185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_testGetOne_success.ic" NAME="AdditionalManagementImplTest.testGetOne_success Coverage Results" MODIFIED="1744193699068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_delete_shouldSucceed_whenAdditionalIsInProcess.ic" NAME="AdditionalManagementImplTest.delete_shouldSucceed_whenAdditionalIsInProcess Coverage Results" MODIFIED="1744560966937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/asset_manager_BE$LiquidateManagementImplTest.ic" NAME="LiquidateManagementImplTest Coverage Results" MODIFIED="1744448369103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/asset_manager_BE$ProductManagementImplTest_delete_WhenProductExists_ReturnsSuccess.ic" NAME="ProductManagementImplTest.delete_WhenProductExists_ReturnsSuccess Coverage Results" MODIFIED="1744807497978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_delete_success_inProcess.ic" NAME="AdditionalManagementImplTest.delete_success_inProcess Coverage Results" MODIFIED="1744562125059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_testGetOne_fail_notFound.ic" NAME="AdditionalManagementImplTest.testGetOne_fail_notFound Coverage Results" MODIFIED="1744293149382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/asset_manager_BE$UserManagementImplTest.ic" NAME="UserManagementImplTest Coverage Results" MODIFIED="1744835171463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$LiquidateManagementImplTest.ic" NAME="LiquidateManagementImplTest Coverage Results" MODIFIED="1744448369103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest.ic" NAME="AdditionalManagementImplTest Coverage Results" MODIFIED="1744627930885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$CampusManagementImplTest_fetchAll_success_returnsCampuses.ic" NAME="CampusManagementImplTest.fetchAll_success_returnsCampuses Coverage Results" MODIFIED="1744791319930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_delete_shouldSucceed_whenAdditionalIsInProcess.ic" NAME="AdditionalManagementImplTest.delete_shouldSucceed_whenAdditionalIsInProcess Coverage Results" MODIFIED="1744560966937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$OrganizationManagementImplTest.ic" NAME="OrganizationManagementImplTest Coverage Results" MODIFIED="1744785110732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
   </component>

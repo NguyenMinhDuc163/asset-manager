@@ -45,8 +45,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-04-07T22:00:10+0700",
-    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_442 (Amazon.com Inc.)"
+    date = "2025-04-14T22:07:31+0700",
+    comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_202 (Oracle Corporation)"
 )
 @Component
 public class CentralMapperImpl implements CentralMapper {

@@ -138,7 +138,7 @@ class UserManagementImplTest {
     }
 
     // STT 4: Tests for update
-    /*@Test
+    @Test
     void update_success_withDepartmentAndRoles() {
         UserUpdateRequestDTO dto = new UserUpdateRequestDTO();
         dto.setId(1L);
@@ -265,6 +265,6 @@ class UserManagementImplTest {
         verify(roleRepository).findByRoleName(RoleName.ROLE_ADMIN);
         verify(passwordEncoder).encode("newpassword");
         verify(userRepository).save(user);
-    }*/
+    }
 
 }

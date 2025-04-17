@@ -10,10 +10,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExportToHTMLSettings">
-    <option name="OPEN_IN_BROWSER" value="true" />
-    <option name="OUTPUT_DIRECTORY" value="D:\New folder\coverage" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -48,27 +44,13 @@
     "JUnit.AdditionalManagementImplTest.delete_success.executor": "Run",
     "JUnit.AdditionalManagementImplTest.delete_success_inProcess.executor": "Coverage",
     "JUnit.AdditionalManagementImplTest.executor": "Coverage",
-    "JUnit.AdditionalManagementImplTest.testDeleteSuccess.executor": "Run",
-    "JUnit.AdditionalManagementImplTest.testGetOne_fail_notFound.executor": "Run",
-    "JUnit.AdditionalManagementImplTest.testGetOne_success.executor": "Coverage",
-    "JUnit.AdditionalManagementImplTest.update_fail_changeUser.executor": "Run",
-    "JUnit.BackupRestoreManagementImplTest.executor": "Coverage",
-    "JUnit.BackupRestoreManagementImplTest.restoreDatabase_fail.executor": "Coverage",
-    "JUnit.InventoryManagementImplTest.delete_failure_dueToCheckedMaterials.executor": "Run",
-    "JUnit.InventoryManagementImplTest.delete_failure_dueToLinkedMaterial.executor": "Coverage",
-    "JUnit.InventoryManagementImplTest.delete_failure_hasCheckedMaterials.executor": "Coverage",
-    "JUnit.InventoryManagementImplTest.executor": "Coverage",
-    "JUnit.LiquidateManagementImplTest.delete_fail_has_materials.executor": "Run",
-    "JUnit.LiquidateManagementImplTest.executor": "Coverage",
-    "JUnit.LiquidateManagementImplTest.update_failure_userNotFound.executor": "Run",
-    "JUnit.LiquidateManagementImplTest.update_success_sameUser.executor": "Run",
-    "JUnit.UserManagementImplTest.executor": "Coverage",
+    "JUnit.UserManagementImplTest.update_success_withDepartmentAndRoles.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "minh",
+    "git-widget-placeholder": "Merging minh",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/New folder/coverage",
     "node.js.detected.package.eslint": "true",
@@ -95,7 +77,7 @@
       <recent name="com.ptit.asset.service.manager.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BackupRestoreManagementImplTest">
+  <component name="RunManager" selected="JUnit.UserManagementImplTest.update_success_withDepartmentAndRoles">
     <configuration name="Asset Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.AssetApplication" />
       <module name="Asset" />
@@ -103,68 +85,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BackupRestoreManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="QRCodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.spacetest.QRCodeGenerator" />
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
+          <option name="PATTERN" value="com.ptit.asset.spacetest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.BackupRestoreManagementImplTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BackupRestoreManagementImplTest.restoreDatabase_fail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Asset" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.BackupRestoreManagementImplTest" />
-      <option name="METHOD_NAME" value="restoreDatabase_fail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InventoryManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Asset" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.InventoryManagementImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LiquidateManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Asset" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.LiquidateManagementImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AdditionalManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
@@ -175,6 +109,53 @@
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.UserManagementImplTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepartmentManagementImplTest.fetchPage_withNegativePageNumber_shouldHandleAppropriately" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Asset" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.DepartmentManagementImplTest" />
+      <option name="METHOD_NAME" value="fetchPage_withNegativePageNumber_shouldHandleAppropriately" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroupManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Asset" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.GroupManagementImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserManagementImplTest.update_success_withDepartmentAndRoles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Asset" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.UserManagementImplTest" />
+      <option name="METHOD_NAME" value="update_success_withDepartmentAndRoles" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -194,20 +175,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Asset Application" />
-      <item itemvalue="JUnit.BackupRestoreManagementImplTest" />
-      <item itemvalue="JUnit.BackupRestoreManagementImplTest.restoreDatabase_fail" />
-      <item itemvalue="JUnit.UserManagementImplTest" />
-      <item itemvalue="JUnit.InventoryManagementImplTest" />
-      <item itemvalue="JUnit.LiquidateManagementImplTest" />
+      <item itemvalue="Application.QRCodeGenerator" />
+      <item itemvalue="JUnit.UserManagementImplTest.update_success_withDepartmentAndRoles" />
+      <item itemvalue="JUnit.DepartmentManagementImplTest.fetchPage_withNegativePageNumber_shouldHandleAppropriately" />
+      <item itemvalue="JUnit.GroupManagementImplTest" />
+      <item itemvalue="JUnit.AdditionalManagementImplTest" />
       <item itemvalue="Spring Boot.AssetApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BackupRestoreManagementImplTest" />
-        <item itemvalue="JUnit.BackupRestoreManagementImplTest.restoreDatabase_fail" />
-        <item itemvalue="JUnit.UserManagementImplTest" />
-        <item itemvalue="JUnit.LiquidateManagementImplTest" />
-        <item itemvalue="JUnit.InventoryManagementImplTest" />
+        <item itemvalue="JUnit.UserManagementImplTest.update_success_withDepartmentAndRoles" />
+        <item itemvalue="JUnit.AdditionalManagementImplTest" />
+        <item itemvalue="Application.QRCodeGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -238,22 +217,8 @@
       <workItem from="1741601689704" duration="247000" />
       <workItem from="1741624454480" duration="2589000" />
       <workItem from="1743866998339" duration="54000" />
-      <workItem from="1744009075426" duration="17255000" />
-      <workItem from="1744178142813" duration="343000" />
-      <workItem from="1744182032070" duration="10673000" />
-      <workItem from="1744198554783" duration="8641000" />
-      <workItem from="1744270805648" duration="5556000" />
-      <workItem from="1744292695538" duration="11397000" />
-      <workItem from="1744351808605" duration="1246000" />
-      <workItem from="1744446059307" duration="8776000" />
-      <workItem from="1744512498633" duration="2275000" />
-      <workItem from="1744559286544" duration="9830000" />
-      <workItem from="1744619396985" duration="7888000" />
-      <workItem from="1744639335518" duration="866000" />
-      <workItem from="1744641691183" duration="6668000" />
-      <workItem from="1744698706490" duration="10507000" />
-      <workItem from="1744729836403" duration="7137000" />
-      <workItem from="1744769997926" duration="8974000" />
+      <workItem from="1744009075426" duration="15402000" />
+      <workItem from="1744870834402" duration="458000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1602485942280</created>
@@ -598,6 +563,9 @@
     <SUITE FILE_PATH="coverage/asset_manager_BE$InventoryManagementImplTest_delete_failure_hasCheckedMaterials.ic" NAME="InventoryManagementImplTest.delete_failure_hasCheckedMaterials Coverage Results" MODIFIED="1744784054541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$CategoryManagementImplTest.ic" NAME="CategoryManagementImplTest Coverage Results" MODIFIED="1744774766643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$BackupRestoreManagementImplTest.ic" NAME="BackupRestoreManagementImplTest Coverage Results" MODIFIED="1744820460095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
@@ -613,8 +581,14 @@
     <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest.ic" NAME="AdditionalManagementImplTest Coverage Results" MODIFIED="1744646216933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$GroupManagementImplTest.ic" NAME="GroupManagementImplTest Coverage Results" MODIFIED="1744773397291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$InventoryManagementImplTest_delete_failure_dueToLinkedMaterial.ic" NAME="InventoryManagementImplTest.delete_failure_dueToLinkedMaterial Coverage Results" MODIFIED="1744780363443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$DepartmentManagementImplTest.ic" NAME="DepartmentManagementImplTest Coverage Results" MODIFIED="1744736471870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$AdditionalManagementImplTest_testGetOne_success.ic" NAME="AdditionalManagementImplTest.testGetOne_success Coverage Results" MODIFIED="1744193699068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>

@@ -43,17 +43,23 @@
     "Application.Asset Application.executor": "Run",
     "Docker.Dockerfile build.executor": "Run",
     "JUnit.AdditionalManagementImplTest.executor": "Coverage",
+    "JUnit.CalculationUnitManagementImplTest.executor": "Coverage",
     "JUnit.CategoryManagementImplTest.executor": "Coverage",
     "JUnit.DepartmentManagementImplTest.executor": "Coverage",
     "JUnit.DepartmentManagementImplTest.fetchPage_withNegativePageNumber_shouldHandleAppropriately.executor": "Run",
     "JUnit.GroupManagementImplTest.executor": "Coverage",
+    "JUnit.MaterialManagementImplTest.executor": "Coverage",
+    "JUnit.PlaceManagementImplTest.executor": "Coverage",
+    "JUnit.TypePlaceManagementImplTest.executor": "Coverage",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "ngkhanhs",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Project_Tester/asset_manager/asset_manager_BE",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -75,7 +81,7 @@
       <recent name="C:\dev\graduating-space\source-code\Asset\src\main\resources\public\image" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CategoryManagementImplTest">
+  <component name="RunManager" selected="JUnit.TypePlaceManagementImplTest">
     <configuration name="Asset Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.AssetApplication" />
       <module name="Asset" />
@@ -83,16 +89,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculationUnitManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ptit.asset.service.*" />
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ptit.asset.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.AdditionalManagementImplTest" />
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.CalculationUnitManagementImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,47 +119,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepartmentManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MaterialManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ptit.asset.service.*" />
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ptit.asset.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.DepartmentManagementImplTest" />
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.MaterialManagementImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepartmentManagementImplTest.fetchPage_withNegativePageNumber_shouldHandleAppropriately" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaceManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ptit.asset.service.*" />
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ptit.asset.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.DepartmentManagementImplTest" />
-      <option name="METHOD_NAME" value="fetchPage_withNegativePageNumber_shouldHandleAppropriately" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.PlaceManagementImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TypePlaceManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ptit.asset.service.*" />
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ptit.asset.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.GroupManagementImplTest" />
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.TypePlaceManagementImplTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -174,28 +179,28 @@
     </configuration>
     <list>
       <item itemvalue="Application.Asset Application" />
+      <item itemvalue="JUnit.CalculationUnitManagementImplTest" />
+      <item itemvalue="JUnit.MaterialManagementImplTest" />
+      <item itemvalue="JUnit.PlaceManagementImplTest" />
+      <item itemvalue="JUnit.TypePlaceManagementImplTest" />
       <item itemvalue="JUnit.CategoryManagementImplTest" />
-      <item itemvalue="JUnit.GroupManagementImplTest" />
-      <item itemvalue="JUnit.DepartmentManagementImplTest" />
-      <item itemvalue="JUnit.DepartmentManagementImplTest.fetchPage_withNegativePageNumber_shouldHandleAppropriately" />
-      <item itemvalue="JUnit.AdditionalManagementImplTest" />
       <item itemvalue="Spring Boot.AssetApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TypePlaceManagementImplTest" />
+        <item itemvalue="JUnit.PlaceManagementImplTest" />
+        <item itemvalue="JUnit.MaterialManagementImplTest" />
+        <item itemvalue="JUnit.CalculationUnitManagementImplTest" />
         <item itemvalue="JUnit.CategoryManagementImplTest" />
-        <item itemvalue="JUnit.GroupManagementImplTest" />
-        <item itemvalue="JUnit.DepartmentManagementImplTest" />
-        <item itemvalue="JUnit.AdditionalManagementImplTest" />
-        <item itemvalue="JUnit.DepartmentManagementImplTest.fetchPage_withNegativePageNumber_shouldHandleAppropriately" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -222,6 +227,7 @@
       <workItem from="1744727331720" duration="3807000" />
       <workItem from="1744733339026" duration="4486000" />
       <workItem from="1744771447131" duration="3068000" />
+      <workItem from="1744871774721" duration="322000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1602485942280</created>

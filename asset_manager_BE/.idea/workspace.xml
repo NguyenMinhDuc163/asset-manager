@@ -57,6 +57,7 @@
     "JUnit.CampusManagementImplTest.executor": "Run",
     "JUnit.CampusManagementImplTest.fetchAll_success_returnsCampuses.executor": "Coverage",
     "JUnit.LiquidateManagementImplTest.executor": "Debug",
+    "JUnit.LoginManagementImplTest.executor": "Coverage",
     "JUnit.OrganizationManagementImplTest.create_edgeCase_nullDTO_returnsFailure.executor": "Run",
     "JUnit.OrganizationManagementImplTest.delete_edgeCase_nullId_returnsFailure.executor": "Run",
     "JUnit.OrganizationManagementImplTest.executor": "Run",
@@ -112,10 +113,25 @@
       <recent name="com.ptit.asset.service.manager.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserManagementImplTest">
+  <component name="RunManager" selected="JUnit.LoginManagementImplTest">
     <configuration name="Asset Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.AssetApplication" />
       <module name="Asset" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Asset" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.LoginManagementImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,22 +162,6 @@
       <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.ProductManagementImplTest" />
       <option name="METHOD_NAME" value="update_WhenCalculationUnitIdIsNull_ReturnsSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductManagementImplTest.update_WhenCategoryIdIsNull_ReturnsSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Asset" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ptit.asset.service.manager.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.ptit.asset.service.manager.impl.ProductManagementImplTest" />
-      <option name="METHOD_NAME" value="update_WhenCategoryIdIsNull_ReturnsSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -213,8 +213,8 @@
     </configuration>
     <list>
       <item itemvalue="Application.Asset Application" />
+      <item itemvalue="JUnit.LoginManagementImplTest" />
       <item itemvalue="JUnit.ProductManagementImplTest.update_WhenCalculationUnitIdIsNull_ReturnsSuccess" />
-      <item itemvalue="JUnit.ProductManagementImplTest.update_WhenCategoryIdIsNull_ReturnsSuccess" />
       <item itemvalue="JUnit.ProductManagementImplTest.update_WhenProductNotFound_ReturnsFailure" />
       <item itemvalue="JUnit.UserManagementImplTest" />
       <item itemvalue="JUnit.ProductManagementImplTest" />
@@ -222,11 +222,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoginManagementImplTest" />
         <item itemvalue="JUnit.UserManagementImplTest" />
         <item itemvalue="JUnit.ProductManagementImplTest" />
         <item itemvalue="JUnit.ProductManagementImplTest.update_WhenProductNotFound_ReturnsFailure" />
         <item itemvalue="JUnit.ProductManagementImplTest.update_WhenCalculationUnitIdIsNull_ReturnsSuccess" />
-        <item itemvalue="JUnit.ProductManagementImplTest.update_WhenCategoryIdIsNull_ReturnsSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -271,6 +271,7 @@
       <workItem from="1744783888148" duration="14356000" />
       <workItem from="1744807443948" duration="686000" />
       <workItem from="1744826009501" duration="4584000" />
+      <workItem from="1744869948641" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1602485942280</created>
@@ -631,6 +632,9 @@
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$UserManagementImplTest.ic" NAME="UserManagementImplTest Coverage Results" MODIFIED="1744835171463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/asset_manager_BE$LoginManagementImplTest.ic" NAME="LoginManagementImplTest Coverage Results" MODIFIED="1744870053371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>com.ptit.asset.service.manager.impl.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/asset_manager_BE$LiquidateManagementImplTest.ic" NAME="LiquidateManagementImplTest Coverage Results" MODIFIED="1744448369103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">

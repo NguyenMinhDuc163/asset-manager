@@ -44,6 +44,7 @@
     "JUnit.AdditionalManagementImplTest.delete_success.executor": "Run",
     "JUnit.AdditionalManagementImplTest.delete_success_inProcess.executor": "Coverage",
     "JUnit.AdditionalManagementImplTest.executor": "Coverage",
+    "JUnit.CalculationUnitManagementImplTest.executor": "Coverage",
     "JUnit.BackupRestoreManagementImplTest.executor": "Coverage",
     "JUnit.LiquidateManagementImplTest.executor": "Coverage",
     "JUnit.UserManagementImplTest.getOne_success.executor": "Run",
@@ -52,6 +53,9 @@
     "JUnit.UserManagementImplTest.update_failure_roleNotFound.executor": "Run",
     "JUnit.UserManagementImplTest.update_failure_userNotFound.executor": "Run",
     "JUnit.UserManagementImplTest.update_success_withDepartmentAndRoles.executor": "Run",
+    "JUnit.MaterialManagementImplTest.executor": "Coverage",
+    "JUnit.PlaceManagementImplTest.executor": "Coverage",
+    "JUnit.TypePlaceManagementImplTest.executor": "Coverage",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -85,6 +89,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.AdditionalManagementImplTest">
+  <component name="RunManager" selected="JUnit.TypePlaceManagementImplTest">
     <configuration name="Asset Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.ptit.asset.AssetApplication" />
       <module name="Asset" />
@@ -92,10 +97,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdditionalManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculationUnitManagementImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
@@ -127,6 +133,7 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,6 +150,7 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,6 +166,7 @@
       <module name="Asset" />
       <extension name="coverage">
         <pattern>
+          <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="PATTERN" value="com.ptit.asset.service.manager.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>

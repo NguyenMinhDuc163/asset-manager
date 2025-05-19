@@ -28,7 +28,7 @@ services:
       sqlserver:
         condition: service_healthy
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:sqlserver://sqlserver_container:1433;databaseName=springboot_asset_dev;encrypt=false
+      - SPRING_DATASOURCE_URL=jdbc:sqlserver://sqlserver_container:1433;databaseName=asset_db;encrypt=false
       - SPRING_DATASOURCE_USERNAME=sa
       - SPRING_DATASOURCE_PASSWORD=NguyenDuc@163
     ports:
